@@ -139,7 +139,7 @@
 	},
 	{
 		"name": "Amphibious",
-		"prerequisites": ["Shock I", "Drill I"],
+		"prerequisites": ["Shock II", "Drill II"],
 		"uniques": ["Eliminates combat penalty for attacking over a river", "Eliminates combat penalty for attacking from the sea"],
 		"unitTypes": ["Sword","Gunpowder"]
 	},
@@ -249,61 +249,6 @@
 		"unitTypes": ["Ranged Water"]
 	},
 
-	// Submarine
-	{
-		"name": "Wolfpack I",
-		"uniques": ["+[25]% Strength when attacking"],
-		"unitTypes": ["Submarine"]
-	},
-	{
-		"name": "Wolfpack II",
-		"prerequisites": ["Wolfpack I"],
-		"uniques": ["+[25]% Strength when attacking"],
-		"unitTypes": ["Submarine"]
-	},
-	{
-		"name": "Wolfpack III",
-		"prerequisites": ["Wolfpack II"],
-		"uniques": ["+[25]% Strength when attacking"],
-		"unitTypes": ["Submarine"]
-	},
-
-	// Aircraft Carrier
-	{
-		"name": "Armor Plating I",
-		"uniques": ["+[25]% Strength when defending"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Armor Plating II",
-		"prerequisites": ["Armor Plating I"],
-		"uniques": ["+[25]% Strength when defending"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Armor Plating III",
-		"prerequisites": ["Armor Plating II"],
-		"uniques": ["+[25]% Strength when defending"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck I",
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck II",
-		"prerequisites": ["Flight Deck I"],
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck III",
-		"prerequisites": ["Flight Deck II"],
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-
 	// Mixed Water
 	{
 		"name" : "Supply",
@@ -408,29 +353,6 @@
 		"unitTypes": ["Fighter", "Bomber", "Helicopter"]
 	},
 
-	// Helicopter
-	{
-		"name": "Mobility I",
-		"uniques": ["[+1] Movement"],
-		"unitTypes": ["Helicopter"]
-	},
-	{
-		"name": "Mobility II",
-		"prerequisites": ["Mobility I"],
-		"uniques": ["[+1] Movement"],
-		"unitTypes": ["Helicopter"]
-	},
-	{
-		"name": "Anti-Armor I",
-		"uniques": ["+[25]% vs [Armored]"],
-		"unitTypes:": ["Helicopter"]
-	},
-	{
-		"name": "Anti-Armor II",
-		"uniques": ["+[25]% vs [Armored]"],
-		"unitTypes:": ["Helicopter"]
-	},
-
 	// Mixed
 	{
 		"name": "Cover I",
@@ -470,20 +392,6 @@
 		"uniques": ["[1] additional attacks per turn"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Melee Water","Ranged Water","Submarine","Fighter","Bomber","Helicopter"]
 	},
-
-	{
-		"name": "Ambush I",
-		"uniques": ["+[33]% Strength vs [Armored]"],
-		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"]
-	},
-	{
-		"name": "Ambush II",
-		"prerequisites": ["Ambush I"],
-		"uniques": ["+[33]% Strength vs [Armored]"],
-		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"]
-	},
-
-
 	// Water ranged and air units
 	{
 		"name": "Bombardment I",
