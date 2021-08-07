@@ -29,7 +29,7 @@
 	},
 	{
 		"name": "Warrior",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 8,
 		"cost": 40,
@@ -42,7 +42,7 @@
 	},
 	{
 		"name": "Maori Warrior",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"uniqueTo": "Polynesia",
 		"replaces": "Warrior",
 		"movement": 2,
@@ -55,7 +55,7 @@
 	},
 	{
 		"name": "Jaguar",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"uniqueTo": "Aztecs",
 		"replaces": "Warrior",
 		"movement": 2,
@@ -69,7 +69,7 @@
 	},
 	{
 		"name": "Brute",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"uniqueTo": "Barbarians",
 		"replaces": "Warrior",
 		"movement": 2,
@@ -81,7 +81,7 @@
 	},
 	{
 		"name": "Archer",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 2,
 		"strength": 5,
 		"rangedStrength": 7,
@@ -93,7 +93,7 @@
 	},
 	{
 		"name": "Bowman",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 2,
 		"strength": 7,
 		"rangedStrength": 9,
@@ -107,7 +107,7 @@
 	},
 	{
 		"name": "Slinger",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "Inca",
 		"replaces": "Archer",
 		"movement": 2,
@@ -123,7 +123,7 @@
 	/*
 	{
 		"name": "Archer",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "Barbarians",
 		"replaces": "Archer",
 		"movement": 2,
@@ -139,7 +139,7 @@
 	*/
 	{
 		"name": "Work Boats",
-		"unitType": "WaterCivilian",
+		"unitType": "Civilian Water",
 		"movement": 4,
 		"cost": 30,
 		"requiredTech": "Sailing",
@@ -147,7 +147,7 @@
 	},
 	{
 		"name": "Trireme",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"movement": 4,
 		"strength": 10,
 		"cost": 45,
@@ -160,7 +160,7 @@
 	/*
 	{
 		"name": "Galley",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"uniqueTo": "Barbarian",
 		"movement": 3,
 		"strength": 7,
@@ -173,7 +173,7 @@
 	*/
 	{
 		"name": "Chariot Archer",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 4,
 		"strength": 6,
 		"rangedStrength": 10,
@@ -187,7 +187,7 @@
 	},
 	{
 		"name": "War Chariot",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "Egypt",
 		"replaces": "Chariot Archer",
 		"movement": 5,
@@ -202,7 +202,7 @@
 	},
 	{
 		"name": "Horse Archer",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "The Huns",
 		"replaces": "Chariot Archer",
 		"movement": 4,
@@ -218,7 +218,7 @@
 	},
 	{
 		"name": "War Elephant",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "India",
 		"replaces": "Chariot Archer",
 		"movement": 3,
@@ -233,7 +233,7 @@
 	},
 	{
 		"name": "Spearman",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 11,
 		"cost": 56,
@@ -247,7 +247,7 @@
 		"name": "Hoplite",
 		"replaces": "Spearman",
 		"uniqueTo": "Greece",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 13,
 		"cost": 56,
@@ -261,7 +261,7 @@
 		"name": "Persian Immortal",
 		"replaces": "Spearman",
 		"uniqueTo": "Persia",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 12,
 		"cost": 56,
@@ -275,7 +275,7 @@
 		"name": "Battering Ram",
 		"replaces": "Spearman",
 		"uniqueTo": "The Huns",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 10,
 		"cost": 75,
@@ -370,7 +370,7 @@
 	},
 	{
 		"name": "Composite Bowman",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 2,
 		"strength": 7,
 		"rangedStrength": 11,
@@ -382,7 +382,7 @@
 	},
 	{
 		"name": "Swordsman",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 14,
 		"cost": 75,
@@ -395,7 +395,7 @@
 	},
 	{
 		"name": "Legion",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"uniqueTo": "Rome",
 		"replaces": "Swordsman",
 		"movement": 2,
@@ -411,7 +411,7 @@
 	},
 	{
 		"name": "Mohawk Warrior",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"uniqueTo": "Iroquois",
 		"replaces": "Swordsman",
 		"movement": 2,
@@ -445,7 +445,7 @@
 	// Medieval Era
 	{
 		"name": "Pikeman",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 16,
 		"cost": 90,
@@ -460,7 +460,7 @@
 		"name": "Landsknecht",
 		"replaces": "Pikeman",
 		"uniqueTo": "Germany",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 16,
 		"cost": 45,
@@ -473,7 +473,7 @@
 	},
 	{
 		"name": "Galleass",
-		"unitType": "WaterRanged",
+		"unitType": "Ranged Water",
 		"movement": 3,
 		"strength": 16,
 		"rangedStrength": 17,
@@ -501,7 +501,7 @@
 		"name": "Camel Archer",
 		"replaces": "Knight",
 		"uniqueTo": "Arabia",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 4,
 		"strength": 17,
 		"rangedStrength": 21,
@@ -564,7 +564,7 @@
 		"name": "Keshik",
 		"replaces": "Knight",
 		"uniqueTo": "Mongolia",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"range": 2,
 		"movement": 5,
 		"strength": 15,
@@ -581,7 +581,7 @@
 	},
 	{
 		"name": "Crossbowman",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"movement": 2,
 		"strength": 13,
 		"rangedStrength": 18,
@@ -593,7 +593,7 @@
 	},
 	{
 		"name": "Chu-Ko-Nu",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"uniqueTo": "China",
 		"movement": 2,
 		"strength": 13,
@@ -608,7 +608,7 @@
 	},
 	{
 		"name": "Longbowman",
-		"unitType": "Ranged",
+		"unitType": "Archery",
 		"range": 2,
 		"movement": 2,
 		"strength": 13,
@@ -652,7 +652,7 @@
 	},
 	{
 		"name": "Longswordsman",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 21,
 		"cost": 120,
@@ -666,7 +666,7 @@
 		"name": "Samurai",
 		"replaces": "Longswordsman",
 		"uniqueTo": "Japan",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
 		"strength": 21,
 		"cost": 120,
@@ -682,7 +682,7 @@
 		"name": "Berserker",
 		"replaces": "Longswordsman",
 		"uniqueTo": "Denmark",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 3,
 		"strength": 21,
 		"cost": 120,
@@ -700,7 +700,7 @@
 
 	{
 		"name": "Caravel",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"movement": 4,
 		"strength": 20,
 		"cost": 120,
@@ -712,7 +712,7 @@
 	},
 	{
 		"name": "Turtle Ship",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"replaces": "Caravel",
 		"uniqueTo": "Korea",
 		"movement": 4,
@@ -726,7 +726,7 @@
 	},
 	{
 		"name": "Musketman",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"movement": 2,
 		"strength": 24,
 		"cost": 150,
@@ -737,7 +737,7 @@
 	},
 	{
 		"name": "Musketeer",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"replaces": "Musketman",
 		"uniqueTo": "France",
 		"movement": 2,
@@ -750,7 +750,7 @@
 	},
 	{
 		"name": "Janissary",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"replaces": "Musketman",
 		"uniqueTo": "The Ottomans",
 		"movement": 2,
@@ -764,7 +764,7 @@
 	},
 	{
 		"name": "Minuteman",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"replaces": "Musketman",
 		"uniqueTo": "America",
 		"movement": 2,
@@ -779,7 +779,7 @@
 	},
 	{
 		"name": "Tercio",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"replaces": "Musketman",
 		"uniqueTo": "Spain",
 		"movement": 2,
@@ -793,7 +793,7 @@
 	},
 	{
 		"name": "Privateer",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"movement": 5,
 		"strength": 25,
 		"cost": 150,
@@ -804,7 +804,7 @@
 	},
 	{
 		"name": "Sea Beggar",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"replaces": "Privateer",
 		"uniqueTo": "The Netherlands",
 		"movement": 5,
@@ -816,7 +816,7 @@
 	},
 	{
 		"name": "Frigate",
-		"unitType": "WaterRanged",
+		"unitType": "Ranged Water",
 		"movement": 5,
 		"strength": 25,
 		"rangedStrength": 28,
@@ -828,7 +828,7 @@
 	},
 	{
 		"name": "Ship of the Line",
-		"unitType": "WaterRanged",
+		"unitType": "Ranged Water",
 		"replaces": "Frigate",
 		"uniqueTo": "England",
 		"movement": 5,
@@ -902,7 +902,7 @@
 
 	{
 		"name": "Gatling Gun",
-		"unitType": "Ranged",
+		"unitType": "Ranged Gunpowder",
 		"range": 1,
 		"movement": 2,
 		"strength": 30,
@@ -913,7 +913,7 @@
 	},
 	{
 		"name": "Rifleman",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"movement": 2,
 		"strength": 34,
 		"cost": 225,
@@ -922,7 +922,7 @@
 	},
 	{
 		"name": "Norwegian Ski Infantry",
-		"unitType": "Melee",
+		"unitType": "Gunpowder",
 		"replaces": "Rifleman",
 		"uniqueTo": "Denmark",
 		"movement": 2,
@@ -972,7 +972,7 @@
 	},
 	{
 		"name": "Ironclad",
-		"unitType": "WaterMelee",
+		"unitType": "Melee Water",
 		"movement": 3,
 		"strength": 45,
 		"cost": 250,
