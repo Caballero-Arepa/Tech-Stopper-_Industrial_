@@ -1,4 +1,5 @@
 [
+	//Based from yairm's vainilla unciv
 	{
 		"columnNumber": 0,
 		"era": "Ancient era",
@@ -279,7 +280,7 @@
 			{
 				"name": "Banking",
 				"row": 6,
-				"prerequisites": ["Chivalry"],
+				"prerequisites": ["Chivalry", "Education"],
 				"quote": "'Happiness: a good bank account, a good cook and a good digestion' - Jean Jacques Rousseau"
 			},
 			{
@@ -345,7 +346,7 @@
 			{
 				"name": "Archaeology",
 				"row": 2,
-				"prerequisites": ["Navigation"],
+				"prerequisites": ["Navigation","Architecture"],
 				"quote": "'Those who cannot remember the past are condemned to repeat it.' - George Santayana"
 			},
 			{
@@ -445,6 +446,7 @@
 			}
 		]
 	},
+	//This has this many techs so cities don't have infinite streght
 	{
 		"columnNumber": 13,
 		"era": "Modern era",
