@@ -127,7 +127,7 @@
 		"terrainsCanBeFoundOn": ["Jungle","Grassland","Plains","Desert","Tundra","Hill"],
 		"gold": 3,
 		"improvement": "Mine",
-		"improvementStats": {"gold": 1}
+		"improvementStats": {"production": 1}
 	},
 	{
 		"name": "Gold Ore", // Not called "Gold" in order to not conflict with siege type units for translations
@@ -135,7 +135,7 @@
 		"terrainsCanBeFoundOn": ["Grassland","Plains","Desert","Hill"],
 		"gold": 2,
 		"improvement": "Mine",
-		"improvementStats": {"gold": 1}
+		"improvementStats": {"production": 1}
 	},
 	{
 		"name": "Silver",
@@ -143,7 +143,7 @@
 		"terrainsCanBeFoundOn": ["Desert","Tundra","Hill"],
 		"gold": 2,
 		"improvement": "Mine",
-		"improvementStats": {"gold": 1}
+		"improvementStats": {"production": 1}
 	},
 	{
 		"name": "Incense",
@@ -219,15 +219,26 @@
 		"improvement": "Fishing Boats",
 		"improvementStats": {"food": 1}
 	}
-	/*
+	{
+		"name": "Jewelry",
+		"resourceType": "Luxury",
+		"gold": 2,
+		"unique": "Can only be created by Mercantile City-States"
+	},
+	{
+		"name": "Porcelain",
+		"resourceType": "Luxury",
+		"gold": 2,
+		"unique": "Can only be created by Mercantile City-States"
+	}
 	{
 		"name": "Citrus",
 		"resourceType": "Luxury",
-		"terrainsCanBeFoundOn": ["Plains","Grassland"],
+		"terrainsCanBeFoundOn": ["Jungle","Forest"],
 		"food": 1,
 		"gold": 1,
 		"improvement": "Plantation",
-		"improvementStats": {"food": 1,"gold": 1},
+		"improvementStats": {"gold": 1},
 	},
 	{
 		"name": "Copper",
@@ -235,8 +246,9 @@
 		"terrainsCanBeFoundOn": ["Plains","Grassland","Desert","Tundra","Snow"],
 		"gold": 2,
 		"improvement": "Mine",
-		"improvementStats": {"gold": 2}
+		"improvementStats": {"production": 2}
 	},
+	/* 
 	{
 		"name": "Cocoa",
 		"resourceType": "Luxury",
@@ -246,6 +258,7 @@
 		"improvement": "Plantation",
 		"improvementStats": {"food": 1,"gold": 1}
 	},
+	*/
 	{
 		"name": "Crab",
 		"resourceType": "Luxury",
@@ -253,7 +266,16 @@
 		"food": 1,
 		"gold": 1,
 		"improvement": "Fishing Boats",
-		"improvementStats": {"food": 1,"gold": 1},
+		"improvementStats": {"food": 1},
+	},
+	{
+		"name": "Salt",
+		"resourceType": "Luxury",
+		"terrainsCanBeFoundOn": ["Desert","Tundra","Plains"],
+		"gold": 1,
+		"food": 1,
+		"improvement": "Mine",
+		"improvementStats": {"food": 1,"production":1}
 	},
 	{
 		"name": "Truffles",
@@ -261,7 +283,6 @@
 		"terrainsCanBeFoundOn": ["Forest","Marsh","Jungle"],
 		"gold": 2,
 		"improvement": "Camp",
-		"improvementStats": {"gold": 2}
+		"improvementStats": {"gold": 1}
 	},
-	*/
 ]
