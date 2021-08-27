@@ -24,7 +24,8 @@
 		"strength": 5,
 		"cost": 25,
 		"obsoleteTech": "Scientific Theory",
-		"uniques": ["Ignores terrain cost"],
+		"uniques": ["May upgrade to [Archer] through ruins-like effects"],
+		"promotions": ["Ignore terrain cost"],
 		"attackSound": "nonmetalhit"
 	},
 	{
@@ -35,6 +36,7 @@
 		"cost": 40,
 		"obsoleteTech": "Metal Casting",
 		"upgradesTo": "Swordsman",
+		"uniques" : ["May upgrade to [Spearman] through ruins-like effects"],
 		"attackSound": "nonmetalhit",
         "civilopediaText": [
 			{"text": "This is your basic, club-swinging fighter."}
@@ -143,7 +145,7 @@
 		"movement": 4,
 		"cost": 30,
 		"requiredTech": "Sailing",
-		"uniques": ["Cannot enter ocean tiles until Astronomy", "May create improvements on water resources"]
+		"uniques": ["Cannot enter ocean tiles until Astronomy", "May create improvements on water resources", "Uncapturable"]
 	},
 	{
 		"name": "Trireme",
@@ -292,15 +294,13 @@
 		"name": "Spearman",
 		"unitType": "Melee",
 		"movement": 2,
-		"strength": 7,
+		"strength": 10,
 		"cost": 56,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Civil Service",
 		"upgradesTo": "Pikeman",
 		"uniques": ["+[50]% Strength vs [Mounted]"],
 		"attackSound": "metalhit"
-		// Barbarian unique Spearman. Has same icon and name but slightly different 3d texture
-		// 10 strength in expansions
 	},
 	*/
 
@@ -427,9 +427,9 @@
 	/*
 	{
 		"name": "Swordsman",
-		"unitType": "Melee",
+		"unitType": "Sword",
 		"movement": 2,
-		"strength": 11,
+		"strength": 14,
 		"cost": 75,
 		"requiredTech": "Iron Working",
 		"upgradesTo": "Longswordsman",
@@ -451,14 +451,14 @@
 		"cost": 90,
 		"requiredTech": "Civil Service",
 		"uniques": ["+[50]% Strength vs [Mounted]"],
-		"upgradesTo": "Musketman",
+		"upgradesTo": "Lancer",
 		"obsoleteTech": "Gunpowder",
 		"attackSound": "metalhit"
 		//Pikeman should upgrade not only to Musketman but also to Lancer
 	},
 	{
 		"name": "Landsknecht",
-		"replaces": "Pikeman",
+		"replaces": "Lancer",
 		"uniqueTo": "Germany",
 		"unitType": "Sword",
 		"movement": 2,
@@ -1007,8 +1007,7 @@
 		"interceptRange": 5,
 		"cost": 625,
 		"requiredTech": "Flight",
-		"uniques": ["[50]% chance to intercept air attacks","+[50]% Strength vs [Bomber]",
-			"6 tiles in every direction always visible"],
+		"uniques": ["[50]% chance to intercept air attacks","+[50]% Strength vs [Bomber]",],
 		"attackSound": "machinegun"
 	},
 	{
@@ -1028,39 +1027,42 @@
 	{
 		"name": "Great Artist",
 		"unitType": "Civilian",
-		"uniques": ["Can start an [8]-turn golden age", "Can construct [Landmark]", "Great Person - [Culture]", "Unbuildable"],
+		"uniques": ["Can start an [8]-turn golden age", "Can construct [Landmark]", "Great Person - [Culture]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{
 		"name": "Great Scientist",
 		"unitType": "Civilian",
-		"uniques": ["Can hurry technology research", "Can construct [Academy]", "Great Person - [Science]", "Unbuildable"],
+		"uniques": ["Can hurry technology research", "Can construct [Academy]", "Great Person - [Science]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{
 		"name": "Great Merchant",
 		"unitType": "Civilian",
 		"uniques": ["Can undertake a trade mission with City-State, giving a large sum of gold and [30] Influence",
-			"Can construct [Customs house]", "Great Person - [Gold]", "Unbuildable"],
+			"Can construct [Customs house]", "Great Person - [Gold]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{
 		"name": "Great Engineer",
 		"unitType": "Civilian",
-		"uniques": ["Can speed up construction of a wonder", "Can construct [Manufactory]", "Great Person - [Production]", "Unbuildable"],
+		"uniques": ["Can speed up construction of a building", "Can construct [Manufactory]", "Great Person - [Production]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{
 		"name": "Great Prophet",
 		"unitType": "Civilian",
-		"uniques": ["Can construct [Holy site] if it hasn't spread religion yet", "Can spread religion [4] times","Great Person - [Faith]", "Unbuildable"],
-		"movement": 2
+		"uniques": ["Can construct [Holy site] if it hasn't used other actions yet", "Can [Spread Religion] [4] times",
+			"May found a religion", "May enter foreign tiles without open borders", "[-1] Visibility Range",
+			"Great Person - [Faith]", "Unbuildable", "Religious Unit", "Hidden when religion is disabled"],
+		"movement": 2,
+		"religiousStrength": 1000
 	},
 	{
 		"name": "Great General",
 		"unitType": "Civilian",
 		"uniques": ["Can start an [8]-turn golden age", "Bonus for units in 2 tile radius 15%", "Can construct [Citadel]",
-			"Great Person - [War]", "Unbuildable"],
+			"Great Person - [War]", "Unbuildable", "Uncapturable"],
 		"movement": 2
 	},
 	{
@@ -1069,7 +1071,30 @@
 		"uniqueTo": "Mongolia",
 		"replaces": "Great General",
 		"uniques": ["Can start an [8]-turn golden age","Bonus for units in 2 tile radius 15%",
-			"Heal adjacent units for an additional 15 HP per turn", "Can construct [Citadel]", "Great Person - [War]", "Unbuildable"],
+			"Heal adjacent units for an additional 15 HP per turn", "Can construct [Citadel]", "Great Person - [War]", "Unbuildable", "Uncapturable"],
 		"movement": 5
+	},
+
+	/* Religious units */
+
+	{
+		"name": "Missionary",
+		"unitType": "Civilian",
+		"uniques": ["Can [Spread Religion] [2] times", "May enter foreign tiles without open borders, but loses [250] religious strength each turn it ends there",
+			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]", 
+			"[-1] Visibility Range", "Unbuildable", "Religious Unit", "Hidden when religion is disabled"],
+		"movement": 4,
+		"religiousStrength": 1000
+	},
+	{
+		"name": "Inquisitor",
+		"unitType": "Civilian",
+		"uniques": ["Prevents spreading of religion to the city it is next to",
+			// ToDo: change this to an _enhanced_ religion when that is implemented
+			"Can [Remove Foreign religions from your own cities] [1] times",
+			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]",
+			"[+1] Visibility Range", "Hidden when religion is disabled", "Unbuildable", "Religious Unit"
+		],
+		"movement": 3,
 	}
 ]
