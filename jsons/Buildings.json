@@ -1,4 +1,5 @@
 [
+	//Pancake's mod based of vainilla Yairm Unciv
 	// Ancient Era
 
 	// Always available
@@ -18,7 +19,8 @@
 		"culture": 2,
 		"cost": 40,
 		"hurryCostModifier": 40,
-		"maintenance": 1
+		"maintenance": 1,
+		"uniques": ["Destroyed when the city is captured"],
 	},
 	// Column 1
 	{
@@ -91,9 +93,8 @@
 		"culture": 1,
 		"greatPersonPoints": {"Great Scientist": 1},
 		"isWonder": true,
-		"providesFreeBuilding":  "Library",
 		"requiredTech": "Writing",
-		"uniques": ["Free Technology"],
+		"uniques": ["Free Technology","Provides a free [Library] [in this city]"],
 		"quote": "'Libraries are as the shrine where all the relics of the ancient saints, full of true virtue, and all that without delusion or imposture are preserved and reposed.' - Sir Francis Bacon"
 	},
 	{
@@ -129,7 +130,8 @@
 		"cityStrength": 5,
 		"cityHealth": 50,
 		"hurryCostModifier": 25,
-		"requiredTech": "Masonry"
+		"requiredTech": "Masonry",
+		"uniques": ["Destroyed when the city is captured"],
 	},
 	{
 		"name": "Walls of Babylon",
@@ -139,7 +141,8 @@
 		"cityStrength": 6,
 		"cityHealth": 100,
 		"hurryCostModifier": 25,
-		"requiredTech": "Masonry"
+		"requiredTech": "Masonry",
+		"uniques": ["Destroyed when the city is captured"],
 	},
 	{
 		"name": "The Pyramids",
@@ -162,19 +165,18 @@
 	},
 	{
 		"name": "Barracks",
-		"xpForNewUnits": 15,
 		"hurryCostModifier": 25,
 		"maintenance": 1,
-		"requiredTech": "Bronze Working"
+		"requiredTech": "Bronze Working",
+		"uniques": ["New [Military] units start with [15] Experience [in this city]", "Destroyed when the city is captured"],
 	},
 	{
 		"name": "Krepost",
 		"replaces": "Barracks",
 		"uniqueTo": "Russia",
-		"xpForNewUnits": 15,
 		"hurryCostModifier": 25,
 		"maintenance": 1,
-		"uniques": ["-[25]% Culture cost of acquiring tiles [in this city]","-[25]% Gold cost of acquiring tiles [in this city]"],
+		"uniques": ["-[25]% Culture cost of acquiring tiles [in this city]","New [Military] units start with [15] Experience [in this city]","Destroyed when the city is captured","-[25]% Gold cost of acquiring tiles [in this city]"],
 		"requiredTech": "Bronze Working"
 	},
 	{
@@ -205,9 +207,8 @@
 		"culture": 1,
 		"greatPersonPoints": {"Great Merchant": 1},
 		"isWonder": true,
-		"providesFreeBuilding": "Lighthouse",
 		"uniques": ["Must be next to [Coast]", "+[1] Movement for all [{Military} {Water}] units",
-			"+[1] Sight for all [{Military} {Water}] units"],
+			"+[1] Sight for all [{Military} {Water}] units","Provides a free [Lighthouse] [in this city]"],
 		"requiredTech": "Optics",
 		"quote": "'They that go down to the sea in ships, that do business in great waters; these see the works of the Lord, and his wonders in the deep.' - The Bible, Psalms 107:23-24"
 	},
@@ -265,7 +266,6 @@
 		"quote": "'Regard your soldiers as your children, and they will follow you into the deepest valleys; look on them as your own beloved sons, and they will stand by you even unto death.'  - Sun Tzu"
 	},
 	// Column 4
-	/*
 	// Temple and its replacements are religious buildings in G&K
 	{
 		"name": "Temple",
@@ -274,9 +274,8 @@
 		"maintenance": 2,
 		"hurryCostModifier": 25,
 		"requiredTech": "Philosophy",
-		"uniques": ""
+		"uniques": ["Hidden when religion is disabled","Destroyed when the city is captured"]
 	},
-	*/
 	{
 		"name": "National College",
 		"cost": 125,
@@ -316,14 +315,6 @@
 		"requiredBuilding": "Monument",
 		"hurryCostModifier": 25,
 		"requiredTech": "Drama and Poetry"
-		// In Vanilla, this replaces Temple and requires Philosophy and a Monument.
-		// In G&K, this still replaces Temple and requires Philosophy, but becomes a faith building
-		// (alongside Temple) and thus requires a Shrine instead of a Monument.
-		// Since faith is not yet implemented, but G&K's Drama and Poetry (which provides the
-		// Amphiteater, a building with the properties of the vanilla Temple) is, this building
-		// temporarily replaces Drama and Poetry and requires a Monument while having its Vanilla
-		// stats, so it's a mish-mash of vanilla and G&K. It should be changed when faith is
-		// implemented.
 	},
 	{
 		"name": "Mud Pyramid Mosque",
@@ -335,14 +326,6 @@
 		"culture": 4,
 		"requiredBuilding": "Monument",
 		"requiredTech": "Drama and Poetry"
-		// In Vanilla, this replaces Temple and requires Philosophy and a Monument.
-		// In G&K, this still replaces Temple and requires Philosophy, but becomes a faith building
-		// (alongside Temple) and thus requires a Shrine instead of a Monument.
-		// Since faith is not yet implemented, but G&K's Drama and Poetry (which provides the
-		// Amphiteater, a building with the properties of the vanilla Temple) is, this building
-		// temporarily replaces Drama and Poetry and requires a Monument while having its Vanilla
-		// stats, so it's a mish-mash of vanilla and G&K. It should be changed when faith is
-		// implemented.
 	},
 	{
 		"name": "National Epic",
@@ -385,7 +368,7 @@
 		"culture": 1,
 		"isWonder": true,
 		"greatPersonPoints": {"Great Engineer": 1},
-		"uniques": ["Must be next to [Desert]", "[+1 Food, +1 Production] from [Desert] tiles without [Flood Plains] [in this city]", "[+6 Culture] once [Archaeology] is discovered"],
+		"uniques": ["Must be next to [Desert]", "[+1 Food, +1 Production, +1 Gold] from [Desert] tiles without [Flood plains] [in this city]", "Provides a free [Amphitheater] [in this city]", "[+6 Culture] once [Archaeology] is discovered"],
 		"requiredTech": "Currency",
 		"quote": "'...who drinks the water I shall give him, says the Lord, will have a spring inside him welling up for eternal life. Let them bring me to your holy mountain in the place where you dwell. Across the desert and through the mountain to the Canyon of the Crescent Moon...'  - Indiana Jones"
 	},
@@ -401,8 +384,7 @@
 		"culture": 3,
 		"greatPersonPoints": {"Great Engineer": 1},
 		"isWonder": true,
-		"providesFreeBuilding": "Walls",
-		"uniques": ["Enemy land units must spend 1 extra movement point when inside your territory (obsolete upon Dynamite)"],
+		"uniques": ["Enemy land units must spend 1 extra movement point when inside your territory (obsolete upon Dynamite)","Provides a free [Walls] [in this city]"],
 		"requiredTech": "Engineering",
 		"quote": "'The art of war teaches us to rely not on the likelihood of the enemy's not attacking, but rather on the fact that we have made our position unassailable.'  - Sun Tzu"
 	},
@@ -435,14 +417,6 @@
 		"uniques": ["[+25]% great person generation [in this city]", "Must be next to [Fresh water]"],
 		"hurryCostModifier": 25,
 		"maintenance": 1,
-		"requiredTech": "Theology"
-	},
-	{
-		"name": "Monastery",
-		"maintenance": 0,
-		"requiredNearbyImprovedResources": ["Wine","Incense"],
-		"uniques": ["[+2 Culture] from [Wine] tiles [in this city]", "[+2 Culture] from [Incense] tiles [in this city]"],
-		"hurryCostModifier": 25,
 		"requiredTech": "Theology"
 	},
 	{
@@ -510,11 +484,8 @@
 		"hurryCostModifier": 25,
 		"requiredNearbyImprovedResources": ["Iron"],
 		"requiredTech": "Metal Casting",
-		// If spaceship parts are changed into units, the spaceship part unique should be changed to
-		// "+[15]% Production when constructing [Spaceship part] units [in this city]"
-		"uniques": ["+[15]% Production when constructing [Spaceship part] [in this city]",
-			"+[15]% Production when constructing [Land] units [in this city]",
-			"[+1 Production] from [Iron] tiles [in this city]"]
+		"uniques": ["+[15]% Production when constructing [Land] units [in this city]",
+			     "[+1 Production] from [Iron] tiles [in this city]"]
 	},
 	// Column 6
 	{
@@ -574,7 +545,7 @@
 		"hurryCostModifier": 25,
 		"requiredBuilding": "Walls",
 		"requiredTech": "Chivalry"
-		// 4 cityStrength in vanilla, no ExtraCityHitPoints in vanilla
+		"uniques": ["Destroyed when the city is captured"]
 	},
 	{
 		"name": "Mughal Fort",
@@ -586,7 +557,7 @@
 		"culture": 2,
 		"hurryCostModifier": 25,
 		"requiredBuilding": "Walls",
-		"uniques": ["[+1 Gold] once [Flight] is discovered"],
+		"uniques": ["[+1 Gold] once [Flight] is discovered","Destroyed when the city is captured"],
 		"requiredTech": "Chivalry"
 	},
 	{
@@ -594,9 +565,8 @@
 		"culture": 1,
 		"greatPersonPoints": {"Great Artist": 1},
 		"isWonder": true,
-		"providesFreeBuilding": "Castle",
 		"percentStatBonus": {"culture": 20},
-		"uniques": ["All newly-trained [relevant] units [in this city] receive the [Drill I] promotion"],
+		"uniques": ["All newly-trained [relevant] units [in this city] receive the [Drill I] promotion","Provides a free [Castle] [in this city]"],
 		"requiredTech": "Chivalry",
 		"quote": "'Justice is an unassailable fortress, built on the brow of a mountain which cannot be overthrown by the violence of torrents, nor demolished by the force of armies.'  - Joseph Addison"
 	},
@@ -620,11 +590,11 @@
 	},
 	{
 		"name": "Armory",
-		"xpForNewUnits": 15,
 		"hurryCostModifier": 25,
 		"maintenance": 1,
 		"requiredBuilding": "Barracks",
-		"requiredTech": "Steel"
+		"requiredTech": "Steel",
+		"uniques": ["New [Military] units start with [15] Experience [in this city]","Destroyed when the city is captured"]
 	},
 	
 	// Renaissance Era
@@ -646,7 +616,8 @@
 		"hurryCostModifier": 10,
 		"requiredBuilding": "Amphitheater",
 		"maintenance": 2,
-		"requiredTech": "Acoustics"
+		"requiredTech": "Acoustics",
+		"uniques": ["Destroyed when the city is captured"]
 	},
 	{
 		"name": "Sistine Chapel",
@@ -722,8 +693,7 @@
 		"culture": 3,
 		"isWonder": true,
 		"greatPersonPoints": {"Great Engineer": 2},
-		"providesFreeBuilding": "Castle",
-		"uniques": ["+[15]% Strength for units fighting in [Friendly Land]"],
+		"uniques": ["+[15]% Strength for units fighting in [Friendly Land]","Provides a free [Castle] [in this city]"],
 		"requiredTech": "Gunpowder",
 		"quote": "'Bushido is realized in the presence of death. This means choosing death whenever there is a choice between life and death. There is no other reasoning.'  - Yamamoto Tsunetomo"
 	},
@@ -803,7 +773,8 @@
 		"requiredBuilding": "Opera House",
 		"maintenance": 3,
 		"hurryCostModifier": 0,
-		"requiredTech": "Archaeology"
+		"requiredTech": "Archaeology",
+		"uniques": ["Destroyed when the city is captured"]
 	},
 	{
 		"name": "The Louvre",
@@ -848,19 +819,18 @@
 	},
 	{
 		"name": "Military Academy",
-		"xpForNewUnits": 15,
 		"hurryCostModifier": 0,
 		"maintenance": 1,
 		"requiredBuilding": "Armory",
+		"uniques": ["New [Military] units start with [15] Experience [in this city]", "Destroyed when the city is captured"],
 		"requiredTech": "Military Science"
 	},
 	{
 		"name": "Brandenburg Gate",
 		"culture": 3,
-		"xpForNewUnits": 15,
 		"greatPersonPoints": {"Great Scientist": 2},
 		"isWonder": true,
-		"uniques": ["Free [Great General] appears"],
+		"uniques": ["Free [Great General] appears","New [Military] units start with [15] Experience [in this city]"],
 		"requiredTech": "Military Science",
 		"quote": "'Pale Death beats equally at the poor man's gate and at the palaces of kings.'  - Horace"
 	},
@@ -913,4 +883,41 @@
 		"uniques": ["Hidden until [3] social policy branches have been completed", "Triggers a global alert upon build start", 
 			"Triggers a Cultural Victory upon completion", "Hidden when cultural victory is disabled"]
 	}
+
+        // Religious buildings
+
+	{
+		"name": "Cathedral",
+		"cost": 0,
+		"faith": 1,
+		"culture": 3,
+		"happiness": 1,
+		"specialistSlots": {"Artist": 1},
+		"uniques": ["Unbuildable", "Hidden when religion is disabled"]
+	},
+	{
+		"name": "Monastery",
+		"cost": 0,
+		"culture": 2,
+		"faith": 2,
+		"uniques": ["[+1 Culture, +1 Faith] from [Wine] tiles [in this city]", 
+			"[+1 Culture, +1 Faith] from [Incense] tiles [in this city]",
+			"Unbuildable", "Hidden when religion is disabled", "Destroyed when the city is captured"]
+	},
+	{
+		"name": "Mosque",
+		"cost": 0,
+		"culture": 2,
+		"faith": 3,
+		"happiness": 1,
+		"uniques": ["Unbuildable", "Hidden when religion is disabled"]
+	},
+	{
+		"name": "Pagoda",
+		"cost": 0,
+		"culture": 2,
+		"faith": 2,
+		"happiness": 2,
+		"uniques": ["Unbuildable", "Hidden when religion is disabled"]
+	},
 ]
