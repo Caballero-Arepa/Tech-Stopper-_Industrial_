@@ -24,7 +24,7 @@
 		"strength": 5,
 		"cost": 25,
 		"obsoleteTech": "Scientific Theory",
-		"uniques": ["May upgrade to [Archer] through ruins-like effects"],
+		"uniques": ["May upgrade to [Archer] through ruins-like effects", "Never appears as a Barbarian unit"],
 		"promotions": ["Ignore terrain cost"],
 		"attackSound": "nonmetalhit"
 	},
@@ -64,7 +64,7 @@
 		"strength": 8,
 		"cost": 40,
 		"obsoleteTech": "Metal Casting",
-		"uniques": ["+[33]% Strength in [Forest]", "+[33]% Strength in [Jungle]", "Heals [25] damage if it kills a unit"],
+		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>", "Heals [25] damage if it kills a unit"],
 		"promotions": ["Woodsman"],
 		"upgradesTo": "Swordsman",
 		"attackSound": "nonmetalhit"
@@ -101,10 +101,10 @@
 		"rangedStrength": 9,
 		"cost": 40,
 		"requiredTech": "Archery",
-		"obsoleteTech": "Machinery",
+		"obsoleteTech": "Construction",
 		"replaces": "Archer",
 		"uniqueTo": "Babylon",
-		"upgradesTo": "Crossbowman",
+		"upgradesTo": "Composite Bowman",
 		"attackSound": "arrow"
 	},
 	{
@@ -117,14 +117,27 @@
 		"rangedStrength": 7,
 		"cost": 40,
 		"requiredTech": "Archery",
-		"obsoleteTech": "Machinery",
-		"upgradesTo": "Crossbowman",
+		"obsoleteTech": "Construction",
+		"upgradesTo": "Composite Bowman",
 		"promotions": ["Slinger Withdraw"],
 		"attackSound": "arrow"
 	},
-	/*
 	{
-		"name": "Archer",
+		"name": "Atlatlist",
+		"unitType": "Archery",
+		"movement": 2,
+		"strength": 5,
+		"rangedStrength": 7,
+		"cost": 36,
+		"requiredTech": "Agriculture",
+		"obsoleteTech": "Construction",
+		"replaces": "Archer",
+		"uniqueTo": "The Maya",
+		"upgradesTo": "Composite Bowman",
+		"attackSound": "arrow"
+	},
+	{
+		"name": "Skirmisher",
 		"unitType": "Archery",
 		"uniqueTo": "Barbarians",
 		"replaces": "Archer",
@@ -133,19 +146,17 @@
 		"rangedStrength": 7,
 		"cost": 40,
 		"requiredTech": "Archery",
-		"obsoleteTech": "Machinery",
+		"obsoleteTech": "Construction",
 		"upgradesTo": "Crossbowman",
 		"attackSound": "arrow"
-		// Barbarian unique archer. Has same icon and name but +1 rangedStrength (in vanilla) and slightly different 3d texture
 	},
-	*/
 	{
 		"name": "Work Boats",
 		"unitType": "Civilian Water",
 		"movement": 4,
 		"cost": 30,
 		"requiredTech": "Sailing",
-		"uniques": ["Cannot enter ocean tiles until Astronomy", "May create improvements on water resources", "Uncapturable"]
+		"uniques": ["Cannot enter ocean tiles <before discovering [Astronomy]>", "May create improvements on water resources", "Uncapturable"]
 	},
 	{
 		"name": "Trireme",
@@ -154,25 +165,53 @@
 		"strength": 10,
 		"cost": 45,
 		"requiredTech": "Sailing",
+		"uniques": ["Cannot enter ocean tiles", "Never appears as a Barbarian unit"],
+		"upgradesTo": "Caravel",
+		"obsoleteTech": "Astronomy",
+		"attackSound": "nonmetalhit"
+	},
+	{
+		"name": "Quinquereme",
+		"unitType": "Melee Water",
+		"uniqueTo": "Carthage",
+		"replaces": "Trireme",
+		"movement": 4,
+		"strength": 13,
+		"cost": 45,
+		"requiredTech": "Sailing",
 		"uniques": ["Cannot enter ocean tiles"],
 		"upgradesTo": "Caravel",
 		"obsoleteTech": "Astronomy",
 		"attackSound": "nonmetalhit"
 	},
-	/*
+	{
+		"name": "Dromon",
+		"unitType": "Ranged Water",
+		"uniqueTo": "Byzantium",
+		"replaces": "Trireme",
+		"movement": 4,
+		"strength": 8,
+		"rangedStrength": 10,
+		"cost": 56,
+		"requiredTech": "Sailing",
+		"uniques": ["Cannot enter ocean tiles", "[+50]% Strength <vs [Water] units>"],
+		"upgradesTo": "Galleass",
+		"obsoleteTech": "Astronomy",
+		"attackSound": "arrow"
+	},
 	{
 		"name": "Galley",
 		"unitType": "Melee Water",
-		"uniqueTo": "Barbarian",
+		"uniqueTo": "Barbarians",
 		"movement": 3,
 		"strength": 7,
 		"cost": 40,
-		"uniques": ["Cannot enter ocean tiles"]
+		"uniques": ["Cannot enter ocean tiles"],
 		"upgradesTo": "Trireme",
+		"obsoleteTech": "Astronomy",
 		"attackSound": "nonmetalhit"
 		//Barbarian unique naval unit, weaker and slower than Trireme.
 	},
-	*/
 	{
 		"name": "Chariot Archer",
 		"unitType": "Archery",
@@ -184,7 +223,7 @@
 		"requiredResource": "Horses",
 		"upgradesTo": "Knight",
 		"obsoleteTech": "Chivalry",
-		"uniques": ["No defensive terrain bonus", "Rough terrain penalty"],
+		"uniques": ["No defensive terrain bonus", "Rough terrain penalty", "Never appears as a Barbarian unit"],
 		"attackSound": "arrow"
 	},
 	{
@@ -242,67 +281,82 @@
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Civil Service",
 		"upgradesTo": "Pikeman",
-		"uniques": ["+[50]% Strength vs [Mounted]"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
 		"attackSound": "metalhit"
 	},
 	{
 		"name": "Hoplite",
+		"unitType": "Sword",
 		"replaces": "Spearman",
 		"uniqueTo": "Greece",
-		"unitType": "Sword",
 		"movement": 2,
 		"strength": 13,
 		"cost": 56,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Civil Service",
 		"upgradesTo": "Pikeman",
-		"uniques": ["+[50]% Strength vs [Mounted]"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
 		"attackSound": "metalhit"
 	},
 	{
 		"name": "Persian Immortal",
+		"unitType": "Sword",
 		"replaces": "Spearman",
 		"uniqueTo": "Persia",
-		"unitType": "Sword",
 		"movement": 2,
 		"strength": 12,
 		"cost": 56,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Civil Service",
 		"upgradesTo": "Pikeman",
-		"uniques": ["+[50]% Strength vs [Mounted]","+[10] HP when healing"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>", "[+10] HP when healing"],
 		"attackSound": "metalhit"
 	},
 	{
 		"name": "Battering Ram",
+		"unitType": "Sword", // You might expect this to be a siege unit, but apparently it is not
 		"replaces": "Spearman",
 		"uniqueTo": "The Huns",
-		"unitType": "Sword",
 		"movement": 2,
 		"strength": 10,
 		"cost": 75,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Physics",
 		"upgradesTo": "Trebuchet",
-		"uniques": ["+[300]% Strength vs [City]", "No defensive terrain bonus", "+[-33]% Strength when defending",
-		"-[1] Visibility Range", "Can only attack [City] units"],
+		"uniques": ["[+300]% Strength <vs cities> <when attacking>", "No defensive terrain bonus", "[-33]% Strength <when defending>",
+		"[-1] Sight", "Can only attack [City] units"],
 		"promotions":  ["Cover I"],
 		"attackSound": "throw"
-	}
-	/*
+	},
 	{
-		"name": "Spearman",
-		"unitType": "Melee",
+		"name": "Pictish Warrior",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Celts",
+		"movement": 2,
+		"strength": 11,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["Earn [50]% of killed [Military] unit's [Strength] as [Faith]"],
+		"promotions": ["Pictish Courage"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Marauder",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Barbarians",
 		"movement": 2,
 		"strength": 10,
 		"cost": 56,
 		"requiredTech": "Bronze Working",
 		"obsoleteTech": "Civil Service",
 		"upgradesTo": "Pikeman",
-		"uniques": ["+[50]% Strength vs [Mounted]"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
 		"attackSound": "metalhit"
 	},
-	*/
 
 	/* Classical Era */
 	{
@@ -314,8 +368,8 @@
 		"requiredTech": "Horseback Riding",
 		"requiredResource": "Horses",
 		"upgradesTo": "Knight",
-		"obsoleteTech": "Metallurgy",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]" ],
+		"obsoleteTech": "Chivalry",
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>" ],
 		"hurryCostModifier": 20,
 		"attackSound": "horse"
 	},
@@ -329,10 +383,42 @@
 		"cost": 75,
 		"requiredTech": "Horseback Riding",
 		"upgradesTo": "Knight",
-		"obsoleteTech": "Metallurgy",
+		"obsoleteTech": "Chivalry",
 		"promotions": ["Great Generals I"],
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking", "No defensive terrain bonus", "-[33]% Strength vs [City]"],
+		"uniques": ["Can move after attacking", "No defensive terrain bonus", "[-33]% Strength <vs cities>"],
+		"hurryCostModifier": 20,
+		"attackSound": "horse"
+	},
+	{
+		"name": "African Forest Elephant",
+		"unitType": "Mounted",
+		"uniqueTo": "Carthage",
+		"replaces": "Horseman",
+		"movement": 3,
+		"strength": 14,
+		"cost": 100,
+		"requiredTech": "Horseback Riding",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"promotions": ["Great Generals II"],
+		"uniques": ["Can move after attacking", "No defensive terrain bonus", "[-33]% Strength <vs cities>",
+			"[-10]% Strength for enemy [Military] units in adjacent [All] tiles"],
+		"hurryCostModifier": 20,
+		"attackSound": "elephant"
+	},
+	{
+		"name": "Cataphract",
+		"unitType": "Mounted",
+		"uniqueTo": "Byzantium",
+		"replaces": "Horseman",
+		"movement": 3,
+		"strength": 15,
+		"cost": 75,
+		"requiredTech": "Horseback Riding",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"uniques": ["Can move after attacking", "[-25]% Strength <vs cities>"],
 		"hurryCostModifier": 20,
 		"attackSound": "horse"
 	},
@@ -346,8 +432,8 @@
 		"requiredTech": "Mathematics",
 		"obsoleteTech": "Physics",
 		"upgradesTo": "Trebuchet",
-		"uniques": ["+[200]% Strength vs [City]", "No defensive terrain bonus",
-			"Must set up to ranged attack", "Limited Visibility"],
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
+			"Must set up to ranged attack", "[-1] Sight", "Never appears as a Barbarian unit"],
 		"hurryCostModifier": 20,
 		"attackSound": "throw"
 	},
@@ -363,8 +449,189 @@
 		"requiredTech": "Mathematics",
 		"obsoleteTech": "Physics",
 		"upgradesTo": "Trebuchet",
-		"uniques": ["+[200]% Strength vs [City]", "No defensive terrain bonus",
-			"Must set up to ranged attack", "Limited Visibility"],
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
+			"Must set up to ranged attack", "[-1] Sight"],
+		"hurryCostModifier": 20,
+		"attackSound": "throw"
+	},{
+		"name": "Spearman",
+		"unitType": "Sword",
+		"movement": 2,
+		"strength": 11,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Hoplite",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Greece",
+		"movement": 2,
+		"strength": 13,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Persian Immortal",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Persia",
+		"movement": 2,
+		"strength": 12,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["[+50]% Strength <vs [Mounted] units>", "[+10] HP when healing"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Battering Ram",
+		"unitType": "Sword", // You might expect this to be a siege unit, but apparently it is not
+		"replaces": "Spearman",
+		"uniqueTo": "The Huns",
+		"movement": 2,
+		"strength": 10,
+		"cost": 75,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Physics",
+		"upgradesTo": "Trebuchet",
+		"uniques": ["[+300]% Strength <vs cities> <when attacking>", "No defensive terrain bonus", "[-33]% Strength <when defending>",
+		"[-1] Sight", "Can only attack [City] units"],
+		"promotions":  ["Cover I"],
+		"attackSound": "throw"
+	},
+	{
+		"name": "Pictish Warrior",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Celts",
+		"movement": 2,
+		"strength": 11,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["Earn [50]% of killed [Military] unit's [Strength] as [Faith]"],
+		"promotions": ["Pictish Courage"],
+		"attackSound": "metalhit"
+	},
+	{
+		"name": "Marauder",
+		"unitType": "Sword",
+		"replaces": "Spearman",
+		"uniqueTo": "Barbarians",
+		"movement": 2,
+		"strength": 10,
+		"cost": 56,
+		"requiredTech": "Bronze Working",
+		"obsoleteTech": "Civil Service",
+		"upgradesTo": "Pikeman",
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
+		"attackSound": "metalhit"
+	},
+
+	/* Classical Era */
+	{
+		"name": "Horseman",
+		"unitType": "Mounted",
+		"movement": 4,
+		"strength": 12,
+		"cost": 75,
+		"requiredTech": "Horseback Riding",
+		"requiredResource": "Horses",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>" ],
+		"hurryCostModifier": 20,
+		"attackSound": "horse"
+	},
+	{
+		"name": "Companion Cavalry",
+		"unitType": "Mounted",
+		"uniqueTo": "Greece",
+		"replaces": "Horseman",
+		"movement": 5,
+		"strength": 14,
+		"cost": 75,
+		"requiredTech": "Horseback Riding",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"promotions": ["Great Generals I"],
+		"requiredResource": "Horses",
+		"uniques": ["Can move after attacking", "No defensive terrain bonus", "[-33]% Strength <vs cities>"],
+		"hurryCostModifier": 20,
+		"attackSound": "horse"
+	},
+	{
+		"name": "African Forest Elephant",
+		"unitType": "Mounted",
+		"uniqueTo": "Carthage",
+		"replaces": "Horseman",
+		"movement": 3,
+		"strength": 14,
+		"cost": 100,
+		"requiredTech": "Horseback Riding",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"promotions": ["Great Generals II"],
+		"uniques": ["Can move after attacking", "No defensive terrain bonus", "[-33]% Strength <vs cities>",
+			"[-10]% Strength for enemy [Military] units in adjacent [All] tiles"],
+		"hurryCostModifier": 20,
+		"attackSound": "elephant"
+	},
+	{
+		"name": "Cataphract",
+		"unitType": "Mounted",
+		"uniqueTo": "Byzantium",
+		"replaces": "Horseman",
+		"movement": 3,
+		"strength": 15,
+		"cost": 75,
+		"requiredTech": "Horseback Riding",
+		"upgradesTo": "Knight",
+		"obsoleteTech": "Chivalry",
+		"uniques": ["Can move after attacking", "[-25]% Strength <vs cities>"],
+		"hurryCostModifier": 20,
+		"attackSound": "horse"
+	},
+	{
+		"name": "Catapult",
+		"unitType": "Siege",
+		"movement": 2,
+		"strength": 7,
+		"rangedStrength": 8,
+		"cost": 75,
+		"requiredTech": "Mathematics",
+		"obsoleteTech": "Physics",
+		"upgradesTo": "Trebuchet",
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
+			"Must set up to ranged attack", "[-1] Sight", "Never appears as a Barbarian unit"],
+		"hurryCostModifier": 20,
+		"attackSound": "throw"
+	},
+	{
+		"name": "Ballista",
+		"unitType": "Siege",
+		"replaces": "Catapult",
+		"uniqueTo": "Rome",
+		"movement": 2,
+		"strength": 8,
+		"rangedStrength": 10,
+		"cost": 75,
+		"requiredTech": "Mathematics",
+		"obsoleteTech": "Physics",
+		"upgradesTo": "Trebuchet",
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>", "No defensive terrain bonus",
+			"Must set up to ranged attack", "[-1] Sight"],
 		"hurryCostModifier": 20,
 		"attackSound": "throw"
 	},
@@ -421,7 +688,7 @@
 		"upgradesTo": "Longswordsman",
 		"obsoleteTech": "Gunpowder",
 		"hurryCostModifier": 20,
-		"uniques": ["+[33]% Strength in [Forest]", "+[33]% Strength in [Jungle]"],
+		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>"],
 		"attackSound": "metalhit"
 	},
 	/*
@@ -438,7 +705,6 @@
 		"hurryCostModifier": 20,
 		"attackSound": "metalhit"
 		// Barbarian unique Swordsman. Has same icon and name but slightly different 3d texture
-		// 14 strength in expansions
 	},
 	*/
 
@@ -450,23 +716,22 @@
 		"strength": 16,
 		"cost": 90,
 		"requiredTech": "Civil Service",
-		"uniques": ["+[50]% Strength vs [Mounted]"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
 		"upgradesTo": "Lancer",
 		"obsoleteTech": "Gunpowder",
-		"attackSound": "metalhit"
-		//Pikeman should upgrade not only to Musketman but also to Lancer
+		"attackSound": "metalhit" 
 	},
 	{
 		"name": "Landsknecht",
-		"replaces": "Lancer",
-		"uniqueTo": "Germany",
 		"unitType": "Sword",
+		"replaces": "Pikeman",
+		"uniqueTo": "Germany",
 		"movement": 2,
 		"strength": 16,
 		"cost": 45,
 		"requiredTech": "Civil Service",
-		"uniques": ["+[50]% Strength vs [Mounted]", "Can move immediately once bought" ],
-		"upgradesTo": "Musketman",
+		"uniques": ["[+50]% Strength <vs [Mounted] units>", "Can move immediately once bought" ],
+		"upgradesTo": "Lancer",
 		"obsoleteTech": "Gunpowder",
 		"attackSound": "metalhit"
 		//"Requires [Mercenary Army]" in BNW
@@ -494,14 +759,14 @@
 		"obsoleteTech": "Military Science",
 		"upgradesTo": "Cavalry",
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]" ],
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>", "Never appears as a Barbarian unit"],
 		"attackSound": "horse"
 	},
 	{
 		"name": "Camel Archer",
+		"unitType": "Archery",
 		"replaces": "Knight",
 		"uniqueTo": "Arabia",
-		"unitType": "Archery",
 		"movement": 4,
 		"strength": 17,
 		"rangedStrength": 21,
@@ -516,9 +781,9 @@
 	},
 	{
 		"name": "Conquistador",
+		"unitType": "Mounted",
 		"replaces": "Knight",
 		"uniqueTo": "Spain",
-		"unitType": "Mounted",
 		"movement": 4,
 		"strength": 20,
 		"cost": 135,
@@ -526,7 +791,7 @@
 		"requiredResource": "Horses",
 		"upgradesTo": "Cavalry",
 		"obsoleteTech": "Military Science",
-		"uniques": ["Can move after attacking","No defensive terrain bonus", "Founds a new city", "[+2] Visibility Range", "Defense bonus when embarked"],
+		"uniques": ["Can move after attacking","No defensive terrain bonus", "Founds a new city <on foreign continents>", "[+2] Sight", "Defense bonus when embarked"],
 		"attackSound": "horse"
 		//Conquistador should have no penalty attacking cities
 		//Ability to found new cities can only be used on a foreign continent that does not contain the Spanish capital.
@@ -542,14 +807,14 @@
 		"requiredTech": "Chivalry",
 		"obsoleteTech": "Military Science",
 		"upgradesTo": "Cavalry",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","+[50]% Strength vs [Mounted]","-[33]% Strength vs [City]"],
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[+50]% Strength <vs [Mounted] units>","[-33]% Strength <vs cities>"],
 		"attackSound": "elephant"
 	},
 	{
 		"name": "Mandekalu Cavalry",
+		"unitType": "Mounted",
 		"replaces": "Knight",
 		"uniqueTo": "Songhai",
-		"unitType": "Mounted",
 		"movement": 4,
 		"strength": 20,
 		"cost": 110,
@@ -562,9 +827,9 @@
 	},
 	{
 		"name": "Keshik",
+		"unitType": "Archery",
 		"replaces": "Knight",
 		"uniqueTo": "Mongolia",
-		"unitType": "Archery",
 		"range": 2,
 		"movement": 5,
 		"strength": 15,
@@ -632,7 +897,7 @@
 		"requiredTech": "Physics",
 		"obsoleteTech": "Chemistry",
 		"upgradesTo": "Cannon",
-		"uniques": ["+[200]% Strength vs [City]","No defensive terrain bonus","Must set up to ranged attack","Limited Visibility"],
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>","No defensive terrain bonus","Must set up to ranged attack","[-1] Sight","Never appears as a Barbarian unit"],
 		"attackSound": "throw"
 	},
 	{
@@ -664,9 +929,9 @@
 	},
 	{
 		"name": "Samurai",
+		"unitType": "Sword",
 		"replaces": "Longswordsman",
 		"uniqueTo": "Japan",
-		"unitType": "Sword",
 		"movement": 2,
 		"strength": 21,
 		"cost": 120,
@@ -680,9 +945,9 @@
 	},
 	{
 		"name": "Berserker",
+		"unitType": "Sword",
 		"replaces": "Longswordsman",
 		"uniqueTo": "Denmark",
-		"unitType": "Sword",
 		"movement": 3,
 		"strength": 21,
 		"cost": 120,
@@ -706,7 +971,7 @@
 		"cost": 120,
 		"requiredTech": "Astronomy",
 		"upgradesTo": "Ironclad",
-		"uniques": ["[+1] Visibility Range", "May withdraw before melee ([80]%)"],
+		"uniques": ["[+1] Sight", "May withdraw before melee ([80]%)"],
 		"hurryCostModifier": 30,
 		"attackSound": "cannon"
 	},
@@ -759,7 +1024,7 @@
 		"requiredTech": "Gunpowder",
 		"upgradesTo": "Rifleman",
 		"obsoleteTech": "Rifling",
-		"uniques": ["Heals [50] damage if it kills a unit", "+[25]% Strength when attacking"],
+		"uniques": ["Heals [50] damage if it kills a unit", "[+25]% Strength <when attacking>"],
 		"attackSound": "shot"
 	},
 	{
@@ -788,7 +1053,7 @@
 		"requiredTech": "Gunpowder",
 		"upgradesTo": "Rifleman",
 		"obsoleteTech": "Rifling",
-		"uniques": ["+[50]% Strength vs [Mounted]"],
+		"uniques": ["[+50]% Strength <vs [Mounted] units>"],
 		"attackSound": "shot"
 	},
 	{
@@ -812,7 +1077,8 @@
 		"cost": 150,
 		"requiredTech": "Navigation",
 		"promotions": ["Coastal Raider I", "Coastal Raider II", "Supply"],
-		"uniques": ["May capture killed [Water] units"]
+		"uniques": ["May capture killed [Water] units"],
+		"attackSound": "cannon"
 	},
 	{
 		"name": "Frigate",
@@ -836,7 +1102,7 @@
 		"rangedStrength": 35,
 		"cost": 185,
 		"requiredResource": "Iron",
-		"uniques": ["[+1] Visibility Range"],
+		"uniques": ["[+1] Sight"],
 		"requiredTech": "Navigation",
 		"hurryCostModifier": 20,
 		"attackSound": "cannon"
@@ -849,7 +1115,7 @@
 		"cost": 185,
 		"requiredTech": "Metallurgy",
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]"],
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>","Never appears as a Barbarian unit"],
 		"promotions": ["Formation I"],
 		"attackSound": "horse"
 	},
@@ -863,8 +1129,8 @@
 		"cost": 185,
 		"requiredTech": "Metallurgy",
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]",
-			"[+1] Visibility Range", "No movement cost to pillage"],
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>",
+			"[+1] Sight", "No movement cost to pillage"],
 		"promotions": ["Formation I"],
 		"attackSound": "horse"
 	},
@@ -879,7 +1145,7 @@
 		"cost": 185,
 		"requiredTech": "Metallurgy",
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]",
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>",
 			"Transfer Movement to [Great General]", "[+15]% Strength when stacked with [Great General]"],
 		"promotions": ["Formation I"],
 		"attackSound": "horse"
@@ -894,7 +1160,7 @@
 		"requiredTech": "Chemistry",
 		"upgradesTo": "Artillery",
 		"obsoleteTech": "Dynamite",
-		"uniques": ["+[200]% Strength vs [City]","No defensive terrain bonus","Must set up to ranged attack","Limited Visibility"],
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>","No defensive terrain bonus","Must set up to ranged attack","[-1] Sight","Never appears as a Barbarian unit"],
 		"attackSound": "cannon"
 	},
 
@@ -928,8 +1194,12 @@
 		"movement": 2,
 		"strength": 34,
 		"cost": 225,
-		"requiredTech": "Rifling",
-		"uniques": ["+[25]% Strength in [Snow]", "+[25]% Strength in [Tundra]", "+[25]% Strength in [Hill]", "Double movement in Snow, Tundra and Hills"],
+		"uniques": ["[+25]% Strength <when fighting in [Snow] tiles>",
+			"[+25]% Strength <when fighting in [Tundra] tiles>",
+			"[+25]% Strength <when fighting in [Hill] tiles>",
+			"Double movement in [Snow]",
+			"Double movement in [Tundra]",
+			"Double movement in [Hill]"],
 		"attackSound": "shot"
 	},
 
@@ -946,6 +1216,18 @@
 		"attackSound": "shot"
 	},
 	{
+		"name": "Mehal Sefari",
+		"unitType": "Gunpowder",
+		"replaces": "Rifleman",
+		"uniqueTo": "Ethiopia",
+		"movement": 2,
+		"strength": 34,
+		"cost": 200,
+		"requiredTech": "Rifling",
+		"promotions": ["Drill I","Home Sweet Home"],
+		"attackSound": "shot"
+	},
+	{
 		"name": "Cavalry",
 		"unitType": "Mounted",
 		"movement": 4,
@@ -953,7 +1235,7 @@
 		"cost": 225,
 		"requiredTech": "Military Science",
 		"requiredResource": "Horses",
-		"uniques": ["Can move after attacking","No defensive terrain bonus","-[33]% Strength vs [City]" ],
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>", "Never appears as a Barbarian unit"],
 		"attackSound": "horse"
 	},
 	{
@@ -967,7 +1249,21 @@
 		"requiredTech": "Military Science",
 		"requiredResource": "Horses",
 		"uniques": ["Can move after attacking","No defensive terrain bonus",
-			"-[33]% Strength vs [City]", "+[50]% Strength vs [wounded units]"],
+			"[-33]% Strength <vs cities>", "[+50]% Strength <vs [Wounded] units>"],
+		"attackSound": "horse"
+	},
+	{
+		"name": "Hussar",
+		"unitType": "Mounted",
+		"replaces": "Cavalry",
+		"uniqueTo": "Austria",
+		"movement": 5,
+		"strength": 34,
+		"cost": 225,
+		"requiredTech": "Military Science",
+		"requiredResource": "Horses",
+		"uniques": ["Can move after attacking","No defensive terrain bonus","[-33]% Strength <vs cities>" ,
+		"[+1] Sight", "[+50]% to Flank Attack bonuses" ],
 		"attackSound": "horse"
 	},
 	{
@@ -978,7 +1274,7 @@
 		"cost": 250,
 		"requiredTech": "Steam Power",
 		"requiredResource": "Coal",
-		"uniques": ["+[33]% Strength vs [City]","Double movement in coast"],
+		"uniques": ["[+33]% Strength <vs cities>","Double movement in [Coast]", "Never appears as a Barbarian unit"],
 		"attackSound": "shipguns"
 	},
 	{
@@ -990,8 +1286,9 @@
 		"range": 3,
 		"cost": 320,
 		"requiredTech": "Dynamite",
-		"uniques": ["+[200]% Strength vs [City]","No defensive terrain bonus",
-			"Must set up to ranged attack","Limited Visibility","Ranged attacks may be performed over obstacles"],
+		"uniques": ["[+200]% Strength <vs cities> <when attacking>","No defensive terrain bonus",
+			"Must set up to ranged attack","[-1] Sight", "Never appears as a Barbarian unit"],
+		"promotions": ["Indirect Fire"],
 		"attackSound": "artillery"
 	},
 
@@ -1007,7 +1304,7 @@
 		"interceptRange": 5,
 		"cost": 625,
 		"requiredTech": "Flight",
-		"uniques": ["[50]% chance to intercept air attacks","+[50]% Strength vs [Bomber]",],
+		"uniques": ["[50]% chance to intercept air attacks", "[+50]% Strength <vs [Bomber] units>", "6 tiles in every direction always visible"],
 		"attackSound": "machinegun"
 	},
 	{
@@ -1053,8 +1350,10 @@
 		"name": "Great Prophet",
 		"unitType": "Civilian",
 		"uniques": ["Can construct [Holy site] if it hasn't used other actions yet", "Can [Spread Religion] [4] times",
-			"May found a religion", "May enter foreign tiles without open borders", "[-1] Visibility Range",
-			"Great Person - [Faith]", "Unbuildable", "Religious Unit", "Hidden when religion is disabled"],
+			"Removes other religions when spreading religion", "May found a religion", "May enhance a religion", 
+			"May enter foreign tiles without open borders", "[-1] Sight", "Great Person - [Faith]", 
+			"Unbuildable", "Religious Unit", "Hidden when religion is disabled", 
+			"Takes your religion over the one in their birth city"],
 		"movement": 2,
 		"religiousStrength": 1000
 	},
@@ -1071,7 +1370,7 @@
 		"uniqueTo": "Mongolia",
 		"replaces": "Great General",
 		"uniques": ["Can start an [8]-turn golden age","Bonus for units in 2 tile radius 15%",
-			"Heal adjacent units for an additional 15 HP per turn", "Can construct [Citadel]", "Great Person - [War]", "Unbuildable", "Uncapturable"],
+			"All adjacent units heal [+15] HP when healing", "[+15] HP when healing", "Can construct [Citadel]", "Great Person - [War]", "Unbuildable", "Uncapturable"],
 		"movement": 5
 	},
 
@@ -1082,7 +1381,7 @@
 		"unitType": "Civilian",
 		"uniques": ["Can [Spread Religion] [2] times", "May enter foreign tiles without open borders, but loses [250] religious strength each turn it ends there",
 			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]", 
-			"[-1] Visibility Range", "Unbuildable", "Religious Unit", "Hidden when religion is disabled"],
+			"[-1] Sight", "Unbuildable", "Religious Unit", "Hidden when religion is disabled"],
 		"movement": 4,
 		"religiousStrength": 1000
 	},
@@ -1090,11 +1389,10 @@
 		"name": "Inquisitor",
 		"unitType": "Civilian",
 		"uniques": ["Prevents spreading of religion to the city it is next to",
-			// ToDo: change this to an _enhanced_ religion when that is implemented
 			"Can [Remove Foreign religions from your own cities] [1] times",
-			"Can be purchased with [Faith] [in all cities in which the majority religion is a major religion]",
-			"[+1] Visibility Range", "Hidden when religion is disabled", "Unbuildable", "Religious Unit"
+			"Can be purchased with [Faith] [in all cities in which the majority religion is an enhanced religion]",
+			"[+1] Sight", "Hidden when religion is disabled", "Unbuildable", "Religious Unit"
 		],
-		"movement": 3,
+		"movement": 3
 	}
 ]
