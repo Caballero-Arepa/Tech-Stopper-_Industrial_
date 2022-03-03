@@ -1,0 +1,891 @@
+[
+	{
+		"columnNumber": 0,
+		"era": "Ancient era",
+		"techCost": 20,
+		"buildingCost": 40,
+		"techs": [
+			{
+				"name": "Agriculture",
+				"row": 6,
+				"quote": "'Where tillage begins, other arts follow. The farmers therefore are the founders of human civilization.' - Daniel Webster",
+				"uniques": ["Starting tech"]
+			}
+		]
+	},
+	{
+		"columnNumber": 1,
+		"era": "Ancient era",
+		"techCost": 35,
+		"buildingCost": 60,
+		"wonderCost": 185,
+		"techs": [
+			{
+				"name": "Pottery",
+				"row": 2,
+				"prerequisites": ["Agriculture"],
+				"quote": "'Shall the clay say to him that fashioneth it, what makest thou?' - Bible Isaiah 45:9"
+			},
+			{
+				"name": "Animal Husbandry",
+				"row": 5,
+				"prerequisites": ["Agriculture"],
+				"quote": "'Thou shalt not muzzle the ox when he treadeth out the corn.' - Bible Deuteronomy 25:4"
+			},
+			{
+				"name": "Archery",
+				"row": 7,
+				"prerequisites": ["Agriculture"],
+				"quote": "'The haft of the arrow has been feathered with one of the eagle's own plumes, we often give our enemies the means of our own destruction' - Aesop"
+			},
+			{
+				"name": "Mining",
+				"row": 9,
+				"prerequisites": ["Agriculture"],
+				"quote": "'The meek shall inherit the Earth, but not its mineral rights.' - J. Paul Getty"
+			}
+
+		]
+	},
+	{
+		"columnNumber": 2,
+		"era": "Ancient era",
+		"techCost": 55,
+		"buildingCost": 75,
+		"wonderCost": 185,
+		"techs": [
+			{
+				"name": "Sailing",
+				"row": 1,
+				"prerequisites": ["Pottery"],
+				"quote": "'He who commands the sea has command of everything.' - Themistocles"
+			},
+			{
+				"name": "Calendar",
+				"row": 2,
+				"prerequisites": ["Pottery"],
+				"quote": "'So teach us to number our days, so that we may apply our hearts unto wisdom.' - Bible Psalms 90:12"
+			},
+			{
+				"name": "Writing",
+				"row": 3,
+				"prerequisites": ["Pottery"],
+				"quote": "'He who destroys a good book kills reason itself.' - John Milton"
+			},
+			{
+				"name": "Trapping",
+				"row": 5,
+				"prerequisites": ["Animal Husbandry"],
+				"quote": "'Even brute beasts and wandering birds do not fall into the same traps or nets twice.' - Saint Jerome"
+			},
+			{
+				"name": "The Wheel",
+				"row": 7,
+				"prerequisites": ["Animal Husbandry", "Archery"],
+				"quote": "'Wisdom and virtue are like the two wheels of a cart.' - Japanese proverb"
+			},
+			{
+				"name": "Masonry",
+				"row": 9,
+				"prerequisites": ["Mining"],
+				"quote": "'How happy are those whose walls already rise!' - Virgil"
+			},
+			{
+				"name": "Bronze Working",
+				"row": 10,
+				"prerequisites": ["Mining"],
+				"quote": "'Here Hector entered, with a spear eleven cubits long in his hand; the bronze point gleamed in front of him, and was fastened to the shaft of the spear by a ring of gold.' - Homer"
+			}
+		]
+	},
+	{
+		"columnNumber": 3,
+		"era": "Classical era",
+		"techCost": 105,
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
+			{
+				"name": "Optics",
+				"cost": 85,
+				"row": 1,
+				"prerequisites": ["Sailing"],
+				"uniques": ["Enables embarkation for land units"],
+				"quote": "'He made an instrument to know if the moon shine at full or no.' - Samuel Butler"
+			},
+			{
+				"name": "Horseback Riding",
+				"row": 5,
+				"prerequisites": ["Trapping","The Wheel"],
+				"quote": "'A Horse! A Horse! My kingdom for a horse!' - Shakespeare (Richard III)"
+			},
+			{
+				"name": "Mathematics",
+				"row": 7,
+				"prerequisites": ["The Wheel"],
+				"quote": "'Mathematics is the gate and key to the sciences.' - Roger Bacon"
+			},
+			{
+				"name": "Construction",
+				"row": 9,
+				"prerequisites": ["Masonry","The Wheel"],
+				"quote": "'Three things are to be looked to in a building: that it stands on the right spot; that it be securely founded; that it be successfully executed.' - Johann Wolfgang von Goethe"
+			}
+		]
+	},
+	{
+		"columnNumber": 4,
+		"era": "Classical era",
+		"techCost": 175,
+		"buildingCost": 100,
+		"wonderCost": 250,
+		"techs": [
+			{
+				"name": "Philosophy",
+				"row": 2,
+				"prerequisites": ["Writing","Calendar"],
+				"quote": "'There is only one good, knowledge, and one evil, ignorance.' - Socrates"
+			},
+			{
+				"name": "Drama and Poetry",
+				"row": 3,
+				"prerequisites": ["Writing"],
+				"quote": "'What is drama but life with the dull bits cut out.' - Alfred Hitchcock"
+			},
+			{
+				"name": "Currency",
+				"row": 7,
+				"prerequisites": ["Mathematics"],
+				"quote": "'Better is bread with a happy heart than wealth with vexation.' - Amenemope"
+			},
+			{
+				"name": "Engineering",
+				"row": 8,
+				"prerequisites": ["Mathematics","Construction"],
+				"uniques": ["Roads connect tiles across rivers"],
+				"quote": "'Instrumental or mechanical science is the noblest and, above all others, the most useful.' - Leonardo da Vinci"
+			},
+			{
+				"name": "Iron Working",
+				"row": 10,
+				"prerequisites": ["Bronze Working"],
+				"quote": "'Do not wait to strike til the iron is hot, but make it hot by striking.' - William Butler Yeats"
+			}
+		]
+	},
+	{
+		"columnNumber": 5,
+		"era": "Medieval era",
+		"techCost": 275,
+		"buildingCost": 120,
+		"wonderCost": 300,
+		"techs": [
+			{
+				"name": "Theology",
+				"row": 2,
+				"prerequisites": ["Philosophy", "Drama and Poetry"],
+				"quote": "'Three things are necessary for the salvation of man: to know what he ought to believe; to know what he ought to desire; and to know what he ought to do' - St. Thomas Aquinas"
+			},
+			{
+				"name": "Civil Service",
+				"row": 5,
+				"prerequisites": ["Currency","Horseback Riding","Drama and Poetry"],
+				"uniques": ["Enables Open Borders agreements"],
+				"quote": "'The only thing that saves us from the bureaucracy is its inefficiency' - Eugene McCarthy"
+			},
+			{
+				"name": "Guilds",
+				"row": 7,
+				"prerequisites": ["Currency"],
+				"uniques": ["Enables conversion of city production to gold"],
+				"quote": "'The merchants and the traders have come; their profits are pre-ordained...' - Sri Guru Granth Sahib"
+			},
+			{
+				"name": "Metal Casting",
+				"row": 9,
+				"prerequisites": ["Engineering","Iron Working"],
+				"quote": "'When pieces of bronze or gold or iron break, the metal-smith welds them together again in the fire, and the bond is established.' - Sri Guru Granth Sahib"
+			}
+		]
+	},
+	{
+		"columnNumber": 6,
+		"era": "Medieval era",
+		"techCost": 485,
+		"buildingCost": 160,
+		"wonderCost": 400,
+		"techs": [
+			{
+				"name": "Compass",
+				"cost": 375,
+				"row": 1,
+				"prerequisites": ["Optics","Theology"],
+				"quote": "'I find the great thing in this world is not so much where we stand, as in what direction we are moving.' - Oliver Wendell Holmes"
+			},
+			{
+				"name": "Education",
+				"row": 3,
+				"prerequisites": ["Theology","Civil Service"],
+				"uniques": ["Enables conversion of city production to science","Enables Research agreements"],
+				"quote": "'Education is the best provision for old age.' - Aristotle"
+			},
+			{
+				"name": "Chivalry",
+				"row": 6,
+				"prerequisites": ["Civil Service","Guilds"],
+				"quote": "'Whoso pulleth out this sword of this stone and anvil, is rightwise king born of all England.' - Malory"
+			},
+			{
+				"name": "Machinery",
+				"row": 8,
+				"prerequisites": ["Guilds","Engineering"],
+				"uniques": ["Improves movement speed on roads"],
+				"quote": "'The press is the best instrument for enlightening the mind of man, and improving him as a rational, moral and social being.' - Thomas Jefferson"
+			},
+			{
+				"name": "Physics",
+				"row": 9,
+				"prerequisites": ["Metal Casting"],
+				"quote": "'Measure what is measurable, and make measurable what is not so.' - Galileo Galilei"
+			},
+			{
+				"name": "Steel",
+				"row": 10,
+				"prerequisites": ["Metal Casting"],
+				"quote": "'John Henry said to his Captain, / 'A man ain't nothin' but a man, / And before I'll let your steam drill beat me down, / I'll die with the hammer in my hand.'' - Anonymous: The Ballad of John Henry, the Steel-Drivin' Man"
+			}
+		]
+	},
+	{
+		"columnNumber": 7,
+		"era": "Renaissance era",
+		"techCost": 780,
+		"buildingCost": 200,
+		"wonderCost": 500,
+		"techs": [
+			{
+				"name": "Astronomy",
+				"row": 2,
+				"uniques": ["[+1] Movement <for [Embarked] units>","Enables embarked units to enter ocean tiles"],
+				"prerequisites": ["Compass","Education"],
+				"quote": "'Joyfully to the breeze royal Odysseus spread his sail, and with his rudder skillfully he steered.' - Homer"
+			},
+			{
+				"name": "Acoustics",
+				"row": 4,
+				"prerequisites": ["Education"],
+				"quote": "'Their rising all at once was as the sound of thunder heard remote' - Milton"
+			},
+			{
+				"name": "Banking",
+				"row": 6,
+				"prerequisites": ["Chivalry", "Education"],
+				"quote": "'Happiness: a good bank account, a good cook and a good digestion' - Jean Jacques Rousseau"
+			},
+			{
+				"name": "Printing Press",
+				"row": 8,
+				"prerequisites": ["Machinery","Physics","Chivalry"],
+				"quote": "'It is a newspaper's duty to print the news and raise hell.' - The Chicago Times"
+			},
+			{
+				"name": "Gunpowder",
+				"row": 10,
+				"prerequisites": ["Physics","Steel"],
+				"quote": "'The day when two army corps can annihilate each other in one second, all civilized nations, it is to be hoped, will recoil from war and discharge their troops.' - Alfred Nobel"
+			}
+		]
+	},
+	{
+		"columnNumber": 8,
+		"era": "Renaissance era",
+		"techCost": 1150,
+		"buildingCost": 250,
+		"wonderCost": 625,
+		"techs": [
+			{
+				"name": "Navigation",
+				"row": 2,
+				"prerequisites": ["Astronomy"],
+				"quote": "'The winds and the waves are always on the side of the ablest navigators.' - Edward Gibbon"
+			},
+			{
+				"name": "Architecture",
+				"row": 4,
+				"prerequisites": ["Acoustics","Banking"],
+				"quote": "'Architecture begins where engineering ends.' - Walter Gropius"
+			},
+			{
+				"name": "Economics",
+				"row": 6,
+				"prerequisites": ["Banking","Printing Press"],
+				"quote": "'Compound interest is the most powerful force in the universe.' - Albert Einstein"
+			},
+			{
+				"name": "Metallurgy",
+				"row": 9,
+				"prerequisites": ["Printing Press","Gunpowder"],
+				"quote": "'There never was a good knife made of bad steel.' - Benjamin Franklin"
+			},
+			{
+				"name": "Chemistry",
+				"row": 10,
+				"prerequisites": ["Gunpowder"],
+				"quote": "'Wherever we look, the work of the chemist has raised the level of our civilization and has increased the productive capacity of the nation.' - Calvin Coolidge"
+			}
+		]
+	},
+	{
+		"columnNumber": 9,
+		"era": "Industrial era",
+		"techCost": 1600,
+		"buildingCost": 300,
+		"wonderCost": 750,
+		"techs": [
+			{
+				"name": "Archaeology",
+				"row": 2,
+				"prerequisites": ["Navigation","Architecture"],
+				"quote": "'Those who cannot remember the past are condemned to repeat it.' - George Santayana"
+			},
+			{
+				"name": "Scientific Theory",
+				"row": 4,
+				"prerequisites": ["Architecture","Economics"],
+				"quote": "'Every great advance in science has issued from a new audacity of imagination.' - John Dewey"
+			},
+			{
+				"name": "Industrialization",
+				"row": 6,
+				"prerequisites": ["Economics"],
+				"quote": "'Industrialization based on machinery, already referred to as a characteristic of our age, is but one aspect of the revolution that is being wrought by technology.' - Emily Greene Balch"
+			},
+			{
+				"name": "Rifling",
+				"row": 7,
+				"prerequisites": ["Economics","Metallurgy"],
+				"quote": "'It is well that war is so terrible, or we should grow too fond of it.' - Robert E. Lee"
+			},
+			{
+				"name": "Military Science",
+				"row": 9,
+				"prerequisites": ["Metallurgy","Chemistry"],
+				"quote": "'Wars may be fought with weapons, but they are won by men. It is the spirit of the men who follow and of the man who leads that gains the victory.' - George S. Patton"
+			},
+			{
+				"name": "Fertilizer",
+				"row": 10,
+				"prerequisites": ["Chemistry"],
+				"quote": "'The nation that destroys its soil destroys itself.' - Franklin Delano Roosevelt"
+			}
+		]
+	},
+	{
+		"columnNumber": 10,
+		"era": "Industrial era",
+		"techCost": 2350,
+		"buildingCost": 360,
+		"wonderCost": 900, // Note that this column doesn't actually have any wonders. This just continues the wonderCost = 2.5 * buildingCost pattern from the last few columns.
+		"techs": [
+			{
+				"name": "Telegraph",
+				"row": 3,
+				"prerequisites": ["Scientific Theory", "Archaeology"],
+				"quote": "'The whole country was tied together by radio. We all experienced the same heroes and comedians and singers. They were giants.' - Woody Allen"
+			},
+			{
+				"name": "Steam Power",
+				"row": 6,
+				"uniques": ["[+1] Movement <for [Embarked] units>"],
+				"prerequisites": ["Industrialization","Scientific Theory","Rifling"],
+				"quote": "'The nations of the West hope that by means of steam communication all the world will become as one family.' - Townsend Harris"
+			},
+			{
+				"name": "Dynamite",
+				"row": 9,
+				"prerequisites": ["Fertilizer","Military Science"],
+				"quote": "'As soon as men decide that all means are permitted to fight an evil, then their good becomes indistinguishable from the evil that they set out to destroy.' - Christopher Dawson"
+			}
+		]
+	},
+	{
+		"columnNumber": 11,
+		"era": "Industrial era",
+		"techCost": 3100,
+		"buildingCost": 500,
+		"wonderCost": 1060,
+		"techs": [
+			{
+				"name": "Flight",
+				"row": 6,
+				"prerequisites": ["Steam Power"],
+				"quote": "'Aeronautics was neither an industry nor a science. It was a miracle.' - Igor Sikorsky"
+			},
+			{
+				"name": "Railroads",
+				"row": 8,
+				"prerequisites": ["Steam Power","Dynamite"],
+				"quote": "'The introduction of so powerful an agent as steam to a carriage on wheels will make a great change in the situation of man.' - Thomas Jefferson"
+			}
+		]
+	},
+	{
+		"columnNumber": 12,
+		"era": "Modern era",
+		"techCost": 9500,
+		"buildingCost": 750,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Future Tech",
+				"row": 5,
+				"prerequisites": ["Telegraph", "Flight", "Railroads"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			}
+		]
+	},
+	{
+		"columnNumber": 13,
+		"era": "Modern era",
+		"techCost": 999275,
+		"buildingCost": 120,
+		"wonderCost": 300,
+		"techs": [
+			{
+				"name": "Future Tech1",
+				"row": 1,
+				"prerequisites": ["Future Tech"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Don't worry, this is in order to make citis not OP"
+			},
+			{
+				"name": "Future Tech2",
+				"row": 3,
+				"prerequisites": ["Future Tech"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Don't worry, this is in order to make citis not OP"
+			},
+			{
+				"name": "Future Tech3",
+				"row": 7,
+				"prerequisites": ["Future Tech"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'Don't worry, this is in order to make citis not OP"
+			},
+			{
+				"name": "Future Tech4",
+				"row": 9,
+				"prerequisites": ["Future Tech"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Don't worry, this is in order to make citis not OP"
+			},
+		]
+	},
+	{
+		"columnNumber": 14,
+		"era": "Modern era",
+		"techCost": 42385,
+		"buildingCost": 160,
+		"wonderCost": 400,
+		"techs": [
+			{
+				"name": "Future Tech5",
+				"row": 1,
+				"prerequisites": ["Future Tech1"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I'm tired"
+			},
+			{
+				"name": "Future Tech6",
+				"row": 3,
+				"prerequisites": ["Future Tech2"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech7",
+				"row": 7,
+				"prerequisites": ["Future Tech3"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech8",
+				"row": 2,
+				"prerequisites": ["Future Tech2","Future Tech1"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech9",
+				"row": 10,
+				"prerequisites": ["Future Tech4"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+		]
+	},
+	{
+		"columnNumber": 15,
+		"era": "Modern era",
+		"techCost": 780,
+		"buildingCost": 200,
+		"wonderCost": 500,
+		"techs": [
+			{
+				"name": "Future Tech10",
+				"row": 1,
+				"prerequisites": ["Future Tech5"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech11",
+				"row": 3,
+				"prerequisites": ["Future Tech6"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I actually live in Ecuador"
+			},
+			{
+				"name": "Future Tech12",
+				"row": 5,
+				"prerequisites": ["Future Tech6","Future Tech7"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech13",
+				"row": 7,
+				"prerequisites": ["Future Tech7"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech14",
+				"row": 2,
+				"prerequisites": ["Future Tech8"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'Dying is poetic' - Splash"
+			},
+		]
+	},
+	{
+		"columnNumber": 16,
+		"era": "Modern era",
+		"techCost": 1150,
+		"buildingCost": 250,
+		"wonderCost": 625,
+		"techs": [
+			{
+				"name": "Future Tech15",
+				"row": 1,
+				"prerequisites": ["Future Tech10"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "With the power of three, we defy thy."
+			},
+			{
+				"name": "Future Tech16",
+				"row": 3,
+				"prerequisites": ["Future Tech11"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech17",
+				"row": 5,
+				"prerequisites": ["Future Tech12"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech18",
+				"row": 7,
+				"prerequisites": ["Future Tech13","Future Tech9"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Si si, Colombia, si si, Caribe!"
+			},
+			{
+				"name": "Future Tech19",
+				"row": 2,
+				"prerequisites": ["Future Tech14"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+		]
+	},
+	{
+		"columnNumber": 17,
+		"era": "Modern era",
+		"techCost": 1600,
+		"buildingCost": 300,
+		"wonderCost": 750,
+		"techs": [
+			
+			{
+				"name": "Future Tech20",
+				"row": 1,
+				"prerequisites": ["Future Tech15"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Si si, Colombia, si si, Andina"
+			},
+			{
+				"name": "Future Tech21",
+				"row": 3,
+				"prerequisites": ["Future Tech16"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech22",
+				"row": 5,
+				"prerequisites": ["Future Tech17"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech23",
+				"row": 7,
+				"prerequisites": ["Future Tech18"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech24",
+				"row": 2,
+				"prerequisites": ["Future Tech19"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Si si, Colombia, si si, los Llanos"
+			},
+		]
+	},
+	{
+		"columnNumber": 18,
+		"era": "Modern era",
+		"techCost": 2350,
+		"buildingCost": 360,
+		"wonderCost": 900, 
+		"techs": [
+			{
+				"name": "Future Tech25",
+				"row": 1,
+				"prerequisites": ["Future Tech20"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech26",
+				"row": 3,
+				"prerequisites": ["Future Tech21"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Si si, Colombia, si si, Pacifico"
+			},
+			{
+				"name": "Future Tech27",
+				"row": 5,
+				"prerequisites": ["Future Tech22"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Si si, Colombia, si si, Amazonas XD"
+			},
+			{
+				"name": "Future Tech28",
+				"row": 7,
+				"prerequisites": ["Future Tech23"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech29",
+				"row": 2,
+				"prerequisites": ["Future Tech24"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+		]
+	},
+	{
+		"columnNumber": 19,
+		"era": "Modern era",
+		"techCost": 3100,
+		"buildingCost": 500,
+		"wonderCost": 1060,
+		"techs": [
+			{
+				"name": "Future Tech30",
+				"row": 1,
+				"prerequisites": ["Future Tech25"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I'm very hungry"
+			},
+			{
+				"name": "Future Tech31",
+				"row": 3,
+				"prerequisites": ["Future Tech26"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech32",
+				"row": 5,
+				"prerequisites": ["Future Tech27"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I guess you are struggling to defeat your opponent by force."
+			},
+			{
+				"name": "Future Tech33",
+				"row": 7,
+				"prerequisites": ["Future Tech28"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech34",
+				"row": 2,
+				"prerequisites": ["Future Tech29"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+		]
+	},
+	{
+		"columnNumber": 20,
+		"era": "Modern era",
+		"techCost": 4100,
+		"buildingCost": 500,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Future Tech35",
+				"row": 1,
+				"prerequisites": ["Future Tech30"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech36",
+				"row": 3,
+				"prerequisites": ["Future Tech31"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Ye have been playing for too long, don't ye think?"
+			},
+			{
+				"name": "Future Tech37",
+				"row": 5,
+				"prerequisites": ["Future Tech32"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech38",
+				"row": 7,
+				"prerequisites": ["Future Tech33"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech39",
+				"row": 2,
+				"prerequisites": ["Future Tech34"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I bet you are in a dedicated multiplayer."
+			},
+		]
+	},
+	{
+		"columnNumber": 21,
+		"era": "Modern era",
+		"techCost": 5100,
+		"buildingCost": 500,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Future Tech40",
+				"row": 1,
+				"prerequisites": ["Future Tech35"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech41",
+				"row": 3,
+				"prerequisites": ["Future Tech36"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "General Kenobi"
+			},
+			{
+				"name": "Future Tech42",
+				"row": 5,
+				"prerequisites": ["Future Tech37"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech43",
+				"row": 7,
+				"prerequisites": ["Future Tech38"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech44",
+				"row": 2,
+				"prerequisites": ["Future Tech39"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "Hello There"
+			},
+		]
+	},
+	{
+		"columnNumber": 22,
+		"era": "Industrial era",
+		"techCost": 6400,
+		"buildingCost": 500,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Future Tech45",
+				"row": 1,
+				"prerequisites": ["Future Tech40"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech46",
+				"row": 3,
+				"prerequisites": ["Future Tech41","Future Tech44"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "I don't know why I'm sleepy, I slept 8 hours!"
+			},
+			{
+				"name": "Hello There",
+				"row": 5,
+				"prerequisites": ["Future Tech42"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+			{
+				"name": "Future Tech48",
+				"row": 7,
+				"prerequisites": ["Future Tech43"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "'I think we agree, the past is over.' - George W. Bush"
+			},
+		]
+	},
+	{
+		"columnNumber": 23,
+		"era": "Industrial era",
+		"techCost": 9500,
+		"buildingCost": 750,
+		"wonderCost": 1250,
+		"techs": [
+			{
+				"name": "Final Tech",
+				"row": 5,
+				"prerequisites": ["Future Tech45","Future Tech46","Future Tech48","Hello There"],
+				"uniques": ["Who knows what the future holds?", "Can be continually researched"],
+				"quote": "¡¡For how many hours have you been playing!!"
+			}
+		]
+	}
+]
