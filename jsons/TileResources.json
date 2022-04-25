@@ -74,7 +74,6 @@
 		"improvement": "Fishing Boats",
 		"uniques": ["Generated on every [10] tiles <in [Featureless] [Coast] tiles>"]
 	},
-	/*
 	{
 		"name": "Bison",
 		"resourceType": "Bonus",
@@ -83,7 +82,6 @@
 		"improvement": "Camp",
 		"improvementStats": {"production": 1}
 	},
-	*/
 	
 	// Strategic resources
 	{
@@ -136,7 +134,7 @@
 		"terrainsCanBeFoundOn": ["Grassland","Plains","Hill","Jungle","Forest","Marsh"],
 		"production": 1,
 		"improvement": "Mine",
-		"improvementStats": {"production": 1},
+		"improvementStats": {"production": 2},
 		"uniques": ["Generated with weight [35] <in [Hill] tiles>",
 					"Generated with weight [30] <in [Jungle] tiles> <in tiles without [Hill]>",
 					"Generated with weight [30] <in [Forest] tiles> <in tiles without [Hill]>",
@@ -154,10 +152,9 @@
 	{
 		"name": "Oil",
 		"resourceType": "Strategic",
-		"revealedBy": "Biology",
+		"revealedBy": "Future Tech14",
 		"terrainsCanBeFoundOn": ["Desert","Coast","Tundra","Snow","Marsh","Jungle"],
 		"production": 1,
-		"improvement": "Oil well",
 		"improvementStats": {"production": 3},
 		"uniques": ["Deposits in [Coast] tiles always provide [4] resources",
 					"Guaranteed with Strategic Balance resource option",
@@ -173,39 +170,6 @@
 					"Minor deposits generated with weight [20] <in [Featureless] [Snow] tiles>"],
 		"majorDepositAmount": {"sparse": 5, "default": 7, "abundant": 9},
 		"minorDepositAmount": {"sparse": 2, "default": 3, "abundant": 3}
-	},
-	{
-		"name": "Aluminum",
-		"resourceType": "Strategic",
-		"revealedBy": "Electricity",
-		"terrainsCanBeFoundOn": ["Desert","Tundra","Hill","Snow","Jungle"],
-		"production": 1,
-		"improvement": "Mine",
-		"improvementStats": {"production": 1},
-		"uniques": ["Generated with weight [15] <in [Featureless] [Tundra] tiles>",
-					"Generated with weight [15] <in [Featureless] [Snow] tiles>",
-					"Generated with weight [39] <in [Hill] tiles>",
-					"Minor deposits generated with weight [20] <in [Jungle] tiles>",
-					"Minor deposits generated with weight [10] <in [Featureless] [Desert] tiles>"],
-		"majorDepositAmount": {"sparse": 5, "default": 8, "abundant": 10},
-		"minorDepositAmount": {"sparse": 2, "default": 3, "abundant": 3}
-	},
-	{
-		"name": "Uranium",
-		"resourceType": "Strategic",
-		"revealedBy": "Atomic Theory",
-		"terrainsCanBeFoundOn": ["Marsh","Jungle","Forest","Tundra","Snow"],
-		"production": 1,
-		"improvement": "Mine",
-		"improvementStats": {"production": 1},
-		"uniques": ["Generated with weight [35] <in [Marsh] tiles> <in tiles without [Hill]>",
-					"Generated with weight [70] <in [Jungle] tiles> <in tiles without [Hill]>",
-					"Generated with weight [70] <in [Forest] tiles> <in tiles without [Hill]>",
-					"Minor deposits generated with weight [10] <in [Forest] tiles>",
-					"Minor deposits generated with weight [10] <in [Featureless] [Tundra] tiles>",
-					"Minor deposits generated with weight [10] <in [Featureless] [Snow] tiles>"],
-		"majorDepositAmount": {"sparse": 2, "default": 4, "abundant": 4},
-		"minorDepositAmount": {"sparse": 1, "default": 2, "abundant": 3}
 	},
 	
 	// Luxury resources

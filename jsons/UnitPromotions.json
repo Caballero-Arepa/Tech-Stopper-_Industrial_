@@ -51,7 +51,7 @@
 	},
 	{
 		"name": "Extended Range",
-		"prerequisites": ["Accuracy III","Barrage III","Targeting II","Bombardment II", "Wolfpack II"],
+		"prerequisites": ["Accuracy III","Barrage III","Targeting II","Bombardment II"],
 		"uniques": ["[+1] Range"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"]
 	},
@@ -252,61 +252,6 @@
 		"unitTypes": ["Ranged Water"]
 	},
 
-	// Submarine
-	{
-		"name": "Wolfpack I",
-		"uniques": ["[+25]% Strength <when attacking>"],
-		"unitTypes": ["Submarine"]
-	},
-	{
-		"name": "Wolfpack II",
-		"prerequisites": ["Wolfpack I"],
-		"uniques": ["[+25]% Strength <when attacking>"],
-		"unitTypes": ["Submarine"]
-	},
-	{
-		"name": "Wolfpack III",
-		"prerequisites": ["Wolfpack II"],
-		"uniques": ["[+25]% Strength <when attacking>"],
-		"unitTypes": ["Submarine"]
-	},
-
-	// Aircraft Carrier
-	{
-		"name": "Armor Plating I",
-		"uniques": ["[+25]% Strength <when defending>"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Armor Plating II",
-		"prerequisites": ["Armor Plating I"],
-		"uniques": ["[+25]% Strength <when defending>"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Armor Plating III",
-		"prerequisites": ["Armor Plating II"],
-		"uniques": ["[+25]% Strength <when defending>"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck I",
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck II",
-		"prerequisites": ["Flight Deck I"],
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-	{
-		"name": "Flight Deck III",
-		"prerequisites": ["Flight Deck II"],
-		"uniques": ["Can carry [1] extra [Aircraft] units"],
-		"unitTypes": ["Aircraft Carrier"]
-	},
-
 	// Mixed Water
 	{
 		"name" : "Supply",
@@ -457,7 +402,7 @@
 	{
 		"name": "Mobility",
 		"prerequisites": ["Shock II","Drill II","Targeting I",
-			"Bombardment I","Boarding Party I", "Coastal Raider I", "Wolfpack I"],
+			"Bombardment I","Boarding Party I", "Coastal Raider I"],
 		"uniques": ["[+1] Movement"],
 		"unitTypes": ["Mounted","Melee Water","Ranged Water","Armored","Submarine"]
 	},
@@ -469,22 +414,10 @@
 	},
 	{
 		"name": "Logistics",
-		"prerequisites": ["Accuracy III","Barrage III","Targeting III", "Wolfpack III",
+		"prerequisites": ["Accuracy III","Barrage III","Targeting III",
 			"Bombardment III", "Coastal Raider III","Boarding Party III","Siege III", "Mobility II", "Anti-Armor II"],
 		"uniques": ["[1] additional attacks per turn"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Melee Water","Ranged Water","Submarine","Fighter","Bomber","Helicopter"]
-	},
-
-	{
-		"name": "Ambush I",
-		"uniques": ["[+33]% Strength <vs [Armored] units>"],
-		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"]
-	},
-	{
-		"name": "Ambush II",
-		"prerequisites": ["Ambush I"],
-		"uniques": ["[+33]% Strength <vs [Armored] units>"],
-		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"]
 	},
 
 
@@ -547,54 +480,5 @@
 	{
 		"name": "Home Sweet Home", // only for Mehal Sefari and subsequent upgrades
 		"uniques": ["[+30]% Strength decreasing with distance from the capital"]
-	},
-	{
-		"name": "[Mohawk Warrior] ability",
-		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>"]
-	},
-	{
-		"name": "[Jaguar] ability",
-		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>", "Heals [25] damage if it kills a unit"]
-	},
-	{
-		"name": "[Persian Immortal] ability",
-		"uniques": ["[+10] HP when healing"]
-	},
-	{
-		"name": "[Conquistador] ability",
-		"uniques": ["Defense bonus when embarked"]
-	},
-	{
-		"name": "[Janissary] ability",
-		"uniques": ["Heals [50] damage if it kills a unit", "[+25]% Strength <when attacking>"]
-	},
-	{
-		"name": "[Sipahi] ability",
-		"uniques": ["No movement cost to pillage"]
-	},
-	{
-		"name": "[Cossack] ability",
-		"uniques": ["[+50]% Strength <vs [Wounded] units>"]
-	},
-	{
-		"name": "[Hussar] ability",
-		"uniques": ["[+50]% to Flank Attack bonuses"]
-	},
-	{
-		"name": "[Norwegian Ski Infantry] ability",
-		"uniques": ["[+25]% Strength <when fighting in [Snow] tiles>",
-			"[+25]% Strength <when fighting in [Tundra] tiles>",
-			"[+25]% Strength <when fighting in [Hill] tiles>",
-			"Double movement in [Snow]",
-			"Double movement in [Tundra]",
-			"Double movement in [Hill]"]
-	},
-	{
-		"name": "[Hakkapeliitta] ability",
-		"uniques": ["Transfer Movement to [Great General]", "[+15]% Strength when stacked with [Great General]"]
-	},
-	{
-		"name": "[Zero] ability",
-		"uniques": ["[+33]% Strength <vs [Fighter] units>"]
 	}
 ]
