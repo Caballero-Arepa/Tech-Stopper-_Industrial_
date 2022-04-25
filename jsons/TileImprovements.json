@@ -48,6 +48,14 @@
 		"shortcutKey": "C"
 	},
 	{
+		"name": "Oil well",
+		"terrainsCanBeBuiltOn": ["Coast"],
+		"turnsToBuild": 9,
+		"techRequired": "Biology",
+		"uniques": ["Cannot be built on [Coast] tiles <before discovering [Refrigeration]>"],
+		"shortcutKey": "W"
+	},
+	{
 		"name": "Pasture",
 		"turnsToBuild": 8,
 		"techRequired": "Animal Husbandry",
@@ -130,7 +138,7 @@
 	},
 	{
 		"name": "Remove Fallout",
-		"turnsToBuild": 23,
+		"turnsToBuild": 2,
 		"terrainsCanBeBuiltOn": ["Fallout"],
 		// Has no tile improvements as it can always be built
 		"uniques": ["Can be built outside your borders"],
@@ -166,7 +174,7 @@
 	{
 		"name": "Academy",
 		"science": 8,
-		"uniques": ["Great Improvement", "[+2 Science] <after discovering [Scientific Theory]>"]
+		"uniques": ["Great Improvement", "[+2 Science] <after discovering [Scientific Theory]>", "[+2 Science] <after discovering [Atomic Theory]>"]
 	},
 	{
 		"name": "Landmark",
